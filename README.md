@@ -110,7 +110,7 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 - Highlighted the advantages of tree-based models for handling complex, non-linear relationships in data.
 - Linked visuals and insights through a comprehensive project report.
 
-### 🖼 **[Loan Application Classification](https://github.com/samarthsingh/loan-application-classification)**
+### 🖼 **[Loan Application Classification](https://github.com/samarthsingh1/loan-application-classification)**
 - Implemented **LDA**, **Decision Tree**, **kNN**, and **SVM** classifiers for binary classification of loan applications.
 - Applied **PCA** to reduce dimensionality and analyzed its impact on the performance of kNN and SVM classifiers.
 - Evaluated classifiers on metrics like **Type 1 Error**, **Type 2 Error**, and overall **Accuracy** for original and PCA-reduced datasets.
