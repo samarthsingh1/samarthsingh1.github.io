@@ -1,99 +1,130 @@
 # 👋 Welcome to My Portfolio
 
-<div align="center">
-    <img src="https://via.placeholder.com/120x120" alt="Profile Picture" style="border-radius: 50%;" />
+<div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
+    <img src="https://via.placeholder.com/120x120" alt="Profile Picture" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
+    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
+    <h3 style="color: #555;">Data Scientist | Data Engineer</h3>
+    <p style="font-size: 16px; color: #666;">Turning data into impactful solutions for Fortune 500 companies.</p>
 </div>
-
-**Hi, I'm Samarth Singh!**  
-I am a passionate **Data Scientist** and **Data Engineer** with expertise in building scalable and efficient data solutions for Fortune 500 companies. I love solving complex problems and turning data into actionable insights.
 
 ---
 
-## 🌟 Highlights
+## 🌟 About Me
 
-- **3+ years** of professional experience in data science and engineering.
-- Expertise in **Microsoft Azure**, **Databricks**, and **Google Cloud Services**.
-- Recognized for my contributions to **Procurement**, **Supply Chain**, and **Perfect Store Analytics**.
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to learn more</summary>
+<div style="margin: 10px;">
+I am a highly motivated **Data Scientist** and **Data Engineer** with over three years of professional experience in delivering innovative data solutions. My work has spanned across **Microsoft Azure**, **Databricks**, **Google Cloud**, and **Fortune 500 companies**, where I have:
+- **Optimized workflows and built ETL pipelines**
+- **Leveraged ML models to solve business challenges**
+- **Improved data visualization for better decision-making**
+
+I specialize in scaling data-driven solutions that reduce manual effort and enable organizations to make smarter, faster decisions.  
+</div>
+</details>
 
 ---
 
-## 🛠 Skills at a Glance
+## 🛠 Skillset
 
-<div align="center">
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to explore skills in depth</summary>
+<div style="margin: 10px;">
 
-| **Programming**       | Python, SQL, R, PySpark, TensorFlow, Scikit-Learn, PyTorch  |
-|------------------------|------------------------------------------------------------|
-| **Data Engineering**   | ETL Pipelines, CI/CD, Exploratory Data Analysis, Clustering |
-| **Cloud & Tools**      | Databricks, Azure Data Factory, Apache Airflow, Tableau    |
-| **Visualization**      | Power BI, Matplotlib, Seaborn                              |
+### **Programming**
+- **Languages:** Python, SQL, R, PySpark
+- **Frameworks and Libraries:** TensorFlow, Scikit-learn, PyTorch, Pandas, NumPy, Matplotlib, Seaborn
+
+### **Data Engineering**
+- **ETL Pipelines:** Proficient in creating and managing data pipelines using Databricks, Apache Airflow, and Azure Data Factory.
+- **Big Data:** Experience with Hadoop, Hive, Spark, and Snowflake for large-scale data processing.
+- **Cluster Management:** Skilled in optimizing CI/CD workflows for scalable applications.
+
+### **Cloud Technologies**
+- **Platforms:** Microsoft Azure, Google Cloud Platform, Snowflake
+- **Tools:** Azure Data Factory, BigQuery, Power BI, Tableau
+
+### **Data Science**
+- **Techniques:** Regression Analysis, Time Series Forecasting, Decision Trees, Exploratory Data Analysis (EDA)
+- **Machine Learning:** Model deployment, evaluation, and performance optimization.
+
+### **Visualization**
+- **Dashboards:** Power BI, Tableau
+- **Reporting Tools:** Advanced PowerPoint for executive presentations.
 
 </div>
+</details>
 
 ---
 
 ## 🎓 Education
 
-<div align="center">
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to expand education details</summary>
+<div style="margin: 10px;">
 
-<table>
-    <tr>
-        <th>University</th>
-        <th>Degree</th>
-        <th>Timeline</th>
-    </tr>
-    <tr>
-        <td>University of Maryland, College Park</td>
-        <td>Master of Science, Data Science</td>
-        <td>Aug 2024 – Dec 2025</td>
-    </tr>
-    <tr>
-        <td>Vellore Institute of Technology</td>
-        <td>Bachelor of Technology, Computer Science</td>
-        <td>Jul 2017 – Jun 2021</td>
-    </tr>
-</table>
+| **University**                    | **Degree**                               | **Timeline**       |
+|------------------------------------|------------------------------------------|--------------------|
+| University of Maryland, College Park | Master of Science, Data Science           | Aug 2024 – Dec 2025 |
+| Vellore Institute of Technology     | Bachelor of Technology, Computer Science | Jul 2017 – Jun 2021 |
 
 </div>
+</details>
 
 ---
 
 ## 💼 Professional Experience
 
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to explore my career highlights</summary>
+<div style="margin: 10px;">
+
 ### **Data Scientist/Data Engineer | Mu Sigma Business Solutions**  
 *Jul 2021 – Aug 2024 | Bangalore, India*
 
-#### **Key Achievements:**
-- 🛠 **Procurement Analytics:**  
-  - Optimized table refresh rates by 30% with PySpark scripts.
-  - Built 15+ ETL pipelines for HIVE using Apache Airflow.  
-- 📈 **Supply Chain Analytics:**  
-  - Enhanced inventory balance by 20% using ML-based recommendations.
-  - Prepared detailed impact reports for continuous process improvement.  
-- 🖼 **Perfect Store Analytics:**  
-  - Automated image recognition-based audits, reducing manual labor by 50%.  
-  - Improved Power BI dashboard refresh rates by 15%.
+#### **Key Projects:**
+- **Procurement Analytics:**
+  - Built 15+ ETL pipelines using Apache Airflow, improving table refresh rates by 30%.
+  - Converted SQL procedures into PySpark scripts for improved accessibility.
+- **Supply Chain Analytics:**
+  - Created stock transfer models that increased inventory balance by 20%.
+  - Diagnosed and improved machine learning model recommendations for stakeholders.
+- **Perfect Store Analytics:**
+  - Automated audits with image recognition, cutting manual efforts by 50%.
+  - Designed Power BI dashboards that tracked 20+ KPIs globally.
+
+</div>
+</details>
 
 ---
 
 ## 🔥 Featured Projects
 
-> Check out my repositories to explore these projects in detail!  
-> *(More projects coming soon.)*
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to view my key projects</summary>
+<div style="margin: 10px;">
 
 ### 📊 **[Real-Time Data Pipeline with Azure](https://github.com/samarthsingh/data-pipeline)**
-- **Tech Stack:** Dask, PySpark, Azure Data Factory  
-- Modularized and deployed a live-stream pipeline generating results in under 5 minutes.
+- Modularized a Databricks codebase using Dask and PySpark.
+- Deployed on Azure Data Factory as a live-stream pipeline generating real-time results.
 
 ### 🖼 **[Automated Store Audits with Image Recognition](https://github.com/samarthsingh/store-audits)**
-- **Tech Stack:** Python, Azure Data Factory  
-- Built an automated KPI scorecard generator for global store audits.
+- Built an automated KPI scorecard generator with Azure Data Factory.
+
+</div>
+</details>
 
 ---
 
 ## 🏆 Achievements & Certifications
 
-- **Spot Awards** for Data Engineering Excellence at Mu Sigma  
-- NVIDIA NGC AI Technical Curriculum  
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to see awards and certifications</summary>
+<div style="margin: 10px;">
+- **Spot Awards:** Recognized for Data Engineering Excellence at Mu Sigma.  
+- **NVIDIA NGC AI Technical Curriculum:** Completed advanced AI training.
+</div>
+</details>
 
 ---
 
@@ -115,8 +146,8 @@ I am a passionate **Data Scientist** and **Data Engineer** with expertise in bui
 
 ## 🎯 Portfolio Goals
 
-This portfolio is a living document showcasing my journey as a data scientist and engineer.  
-Feel free to explore, reach out, or collaborate on exciting projects!
+This portfolio is a professional showcase of my work and accomplishments.  
+Feel free to explore, connect, or collaborate on exciting projects!  
 
 <div align="center">
     <img src="https://via.placeholder.com/800x150?text=Thanks+for+Visiting!" alt="Thanks for Visiting!" />
