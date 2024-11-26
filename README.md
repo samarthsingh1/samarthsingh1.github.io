@@ -106,7 +106,7 @@ I am a passionate **Data Scientist** and **Data Engineer** with expertise in bui
     <a href="https://linkedin.com/in/samarth-singh-1776a1162">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" />
     </a>
-    <a href="https://github.com/samarthsingh">
+    <a href="https://github.com/samarthsingh1">
         <img src="https://img.shields.io/badge/GitHub-Visit-black?style=for-the-badge&logo=github&logoColor=white" />
     </a>
 </div>
