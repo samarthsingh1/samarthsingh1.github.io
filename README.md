@@ -3,7 +3,7 @@
 <div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
     <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
     <h3 style="color: #555;">Data Scientist | Data Engineer</h3>
-    <p style="font-size: 16px; color: #666;">Turning data into impactful solutions for Fortune 500 companies.</p>
+    <p style="font-size: 16px; color: #666;">Turning data into impactful solutions.</p>
 </div>
 
 ---
