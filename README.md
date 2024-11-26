@@ -14,12 +14,12 @@
 <details>
 <summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to learn more</summary>
 <div style="margin: 10px;">
-I am a highly motivated ##**Data Scientist** and ##**Data Engineer** with over three years of professional experience in delivering innovative data solutions. My work has spanned across **Microsoft Azure**, **Databricks**, **Google Cloud**, and **Fortune 500 companies**, where I have:
-- ##**Optimized workflows and built ETL pipelines**
-- ##**Leveraged ML models to solve business challenges**
-- ##**Improved data visualization for better decision-making**
-
-I specialize in scaling data-driven solutions that reduce manual effort and enable organizations to make smarter, faster decisions.  
+    I am a highly motivated **Data Scientist** and **Data Engineer** with over three years of professional experience in delivering innovative data solutions. My work has spanned across **Microsoft Azure**, **Databricks**, **Google Cloud**, and **Fortune 500 companies**, where I have:
+    - **Optimized workflows and built ETL pipelines**
+    - **Leveraged ML models to solve business challenges**
+    - **Improved data visualization for better decision-making**
+    
+    I specialize in scaling data-driven solutions that reduce manual effort and enable organizations to make smarter, faster decisions.  
 </div>
 </details>
 
@@ -32,7 +32,7 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 <div style="margin: 10px;">
 
 ### **Programming**
-- **Languages:** Python, SQL, R, PySpark
+- **Languages:** Python, SQL, R, PySpark,Dask
 - **Frameworks and Libraries:** TensorFlow, Scikit-learn, PyTorch, Pandas, NumPy, Matplotlib, Seaborn
 
 ### **Data Engineering**
@@ -41,7 +41,7 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 - **Cluster Management:** Skilled in optimizing CI/CD workflows for scalable applications.
 
 ### **Cloud Technologies**
-- **Platforms:** Microsoft Azure, Google Cloud Platform, Snowflake
+- **Platforms:** Microsoft Azure, Google Cloud Platform, Snowflake,Databricks
 - **Tools:** Azure Data Factory, BigQuery, Power BI, Tableau
 
 ### **Data Science**
