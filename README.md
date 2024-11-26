@@ -9,8 +9,6 @@
 ---
 ## 🌟 About Me
 
-## 🌟 About Me
-
 <details>
 <summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to learn more</summary>
 
@@ -23,8 +21,6 @@ I am a highly motivated **Data Scientist** and **Data Engineer** with over three
 I specialize in scaling data-driven solutions that reduce manual effort and enable organizations to make smarter, faster decisions.
 
 </details>
-
-
 
 ---
 
