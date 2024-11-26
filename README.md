@@ -1,7 +1,7 @@
 # 👋 Welcome to My Portfolio
 
 <div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
-    <img src="(https://drive.google.com/file/d/19QfJj2AkYEdMh8rZsHEE6ZBw7IycPKiU/view?usp=drive_link)" alt="Profile Picture" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
+    <img src="[https://drive.google.com/file/d/19QfJj2AkYEdMh8rZsHEE6ZBw7IycPKiU/view?usp=drive_link]" alt="Profile Picture" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);" />
     <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
     <h3 style="color: #555;">Data Scientist | Data Engineer</h3>
     <p style="font-size: 16px; color: #666;">Turning data into impactful solutions for Fortune 500 companies.</p>
