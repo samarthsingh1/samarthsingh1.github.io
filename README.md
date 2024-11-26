@@ -103,15 +103,23 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 <summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to view my key projects</summary>
 <div style="margin: 10px;">
 
-### 📊 **[Real-Time Data Pipeline with Azure](https://github.com/samarthsingh/data-pipeline)**
-- Modularized a Databricks codebase using Dask and PySpark.
-- Deployed on Azure Data Factory as a live-stream pipeline generating real-time results.
+### 📊 **[Consumer Complaint Prediction](https://github.com/samarthsingh1/data_insights)**
+- Compared the performance of **Logistic Regression** and **Random Forest Classifier** on consumer complaint data.
+- Conducted data preprocessing steps including encoding, feature scaling, and handling class imbalance through undersampling.
+- Evaluated key performance metrics such as **Accuracy**, **F1 Score**, **ROC AUC**, and **Precision/Recall**.
+- Highlighted the advantages of tree-based models for handling complex, non-linear relationships in data.
+- Linked visuals and insights through a comprehensive project report.
 
-### 🖼 **[Automated Store Audits with Image Recognition](https://github.com/samarthsingh/store-audits)**
-- Built an automated KPI scorecard generator with Azure Data Factory.
+### 🖼 **[Loan Application Classification](https://github.com/samarthsingh/loan-application-classification)**
+- Implemented **LDA**, **Decision Tree**, **kNN**, and **SVM** classifiers for binary classification of loan applications.
+- Applied **PCA** to reduce dimensionality and analyzed its impact on the performance of kNN and SVM classifiers.
+- Evaluated classifiers on metrics like **Type 1 Error**, **Type 2 Error**, and overall **Accuracy** for original and PCA-reduced datasets.
+- Demonstrated SVM with PCA as the best-performing model, achieving a balance between error reduction and computational efficiency.
+- Summarized findings with detailed discussions and comparisons.
 
 </div>
 </details>
+
 
 ---
 
