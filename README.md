@@ -127,11 +127,12 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 
 <details>
 <summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to see awards and certifications</summary>
-<div style="margin: 10px;">
-- **Spot Awards:** Recognized for Data Engineering Excellence at Mu Sigma.  
-- **NVIDIA NGC AI Technical Curriculum:** Completed advanced AI training.
-</div>
+
+- **Spot Awards**: Recognized for Data Engineering Excellence at Mu Sigma.
+- **NVIDIA NGC AI Technical Curriculum**: Completed advanced AI training.
+
 </details>
+
 
 ---
 
