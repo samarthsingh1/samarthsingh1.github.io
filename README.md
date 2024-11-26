@@ -1,24 +1,25 @@
 # 👋 Welcome to My Portfolio
 
-<div align="center" style="background-color: #f7f7f7; padding: 20px; border-radius: 10px;">
-    <h1 style="font-family: Arial, sans-serif; color: #333;">Samarth Singh</h1>
-    <h3 style="color: #555;">Data Scientist | Data Engineer</h3>
-    <p style="font-size: 16px; color: #666;">Turning data into impactful solutions.</p>
+<div align="center">
+    <h1>Samarth Singh</h1>
+    <h3>Data Scientist | Data Engineer</h3>
+    <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
 </div>
 
 ---
+
 ## 🌟 About Me
 
 <details>
-<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to learn more</summary>
+<summary><b>Learn more about me</b></summary>
 
-I am a highly motivated **Data Scientist** and **Data Engineer** with over three years of professional experience in delivering innovative data solutions. My work has spanned across **Microsoft Azure**, **Databricks**, **Google Cloud**, and **Fortune 500 companies**, where I have:
+I am a passionate **Data Scientist** and **Data Engineer** with over three years of experience in delivering data-driven solutions. My expertise includes:
 
-- **Optimized workflows** and built **ETL pipelines**
-- Leveraged **ML models** to solve business challenges
-- Improved **data visualization** for better decision-making
+- **Optimizing workflows** and building **ETL pipelines**
+- Deploying **machine learning models** to solve business challenges
+- Creating insightful **visualizations** to drive better decision-making
 
-I specialize in scaling data-driven solutions that reduce manual effort and enable organizations to make smarter, faster decisions.
+I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.
 
 </details>
 
@@ -27,31 +28,15 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 ## 🛠 Skillset
 
 <details>
-<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to explore skills in depth</summary>
-<div style="margin: 10px;">
+<summary><b>View my skills</b></summary>
 
-### **Programming**
-- **Languages:** Python, SQL, R, PySpark,Dask
-- **Frameworks and Libraries:** TensorFlow, Scikit-learn, PyTorch, Pandas, NumPy, Matplotlib, Seaborn
+- **Programming**: Python, SQL, R, PySpark, Dask  
+- **Data Engineering**: Databricks, Apache Airflow, Azure Data Factory, Snowflake  
+- **Machine Learning**: Regression, Time Series Forecasting, Decision Trees, SVM  
+- **Visualization**: Tableau, Power BI  
+- **Cloud Platforms**: Microsoft Azure, Google Cloud Platform  
+- **Frameworks and Libraries**: TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib  
 
-### **Data Engineering**
-- **ETL Pipelines:** Proficient in creating and managing data pipelines using Databricks, Apache Airflow, and Azure Data Factory.
-- **Big Data:** Experience with Hadoop, Hive, Spark, and Snowflake for large-scale data processing.
-- **Cluster Management:** Skilled in optimizing CI/CD workflows for scalable applications.
-
-### **Cloud Technologies**
-- **Platforms:** Microsoft Azure, Google Cloud Platform, Snowflake,Databricks
-- **Tools:** Azure Data Factory, BigQuery, Power BI, Tableau
-
-### **Data Science**
-- **Techniques:** Regression Analysis, Time Series Forecasting, Decision Trees, Exploratory Data Analysis (EDA)
-- **Machine Learning:** Model deployment, evaluation, and performance optimization.
-
-### **Visualization**
-- **Dashboards:** Power BI, Tableau
-- **Reporting Tools:** Advanced PowerPoint for executive presentations.
-
-</div>
 </details>
 
 ---
@@ -59,15 +44,13 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 ## 🎓 Education
 
 <details>
-<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to expand education details</summary>
-<div style="margin: 10px;">
+<summary><b>Explore my education</b></summary>
 
 | **University**                    | **Degree**                               | **Timeline**       |
 |------------------------------------|------------------------------------------|--------------------|
 | University of Maryland, College Park | Master of Science, Data Science           | Aug 2024 – Dec 2025 |
 | Vellore Institute of Technology     | Bachelor of Technology, Computer Science | Jul 2017 – Jun 2021 |
 
-</div>
 </details>
 
 ---
@@ -120,19 +103,17 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 </div>
 </details>
 
-
 ---
 
 ## 🏆 Achievements & Certifications
 
 <details>
-<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to see awards and certifications</summary>
+<summary><b>See my achievements</b></summary>
 
-- **Spot Awards**: Recognized for Data Engineering Excellence at Mu Sigma.
-- **NVIDIA NGC AI Technical Curriculum**: Completed advanced AI training.
+- **Spot Awards**: Recognized for Data Engineering Excellence at Mu Sigma  
+- **NVIDIA NGC AI Technical Curriculum**: Completed advanced AI training  
 
 </details>
-
 
 ---
 
@@ -154,9 +135,8 @@ I specialize in scaling data-driven solutions that reduce manual effort and enab
 
 ## 🎯 Portfolio Goals
 
-This portfolio is a professional showcase of my work and accomplishments.  
-Feel free to explore, connect, or collaborate on exciting projects!  
+This portfolio showcases my work, skills, and accomplishments. Feel free to explore, connect, or collaborate on exciting data-driven projects!  
 
 <div align="center">
-    <img src="https://via.placeholder.com/800x150?text=Thanks+for+Visiting!" alt="Thanks for Visiting!" />
+    <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!" />
 </div>
