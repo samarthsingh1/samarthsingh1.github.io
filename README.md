@@ -1,180 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samarth Singh Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h3 {
-            text-align: center;
-        }
-        h1 {
-            color: #2d89ef;
-        }
-        h3 {
-            color: #555;
-        }
-        p {
-            text-align: center;
-            color: #666;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .details-summary {
-            font-weight: bold;
-            color: #2d89ef;
-            cursor: pointer;
-        }
-        details {
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 10px 0;
-        }
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        table th {
-            background-color: #f4f4f4;
-        }
-        .buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .buttons a {
-            text-decoration: none;
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        .buttons a.email {
-            background-color: #e74c3c;
-        }
-        .buttons a.email:hover {
-            background-color: #c0392b;
-        }
-        .buttons a.linkedin {
-            background-color: #0077b5;
-        }
-        .buttons a.linkedin:hover {
-            background-color: #005582;
-        }
-        .buttons a.github {
-            background-color: #333;
-        }
-        .buttons a.github:hover {
-            background-color: #000;
-        }
-        .thank-you {
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Samarth Singh</h1>
-        <h3>Data Scientist | Data Engineer</h3>
-        <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
+# 👋 Welcome to My Portfolio
 
-        <div class="section">
-            <h2>🌟 About Me</h2>
-            <details>
-                <summary class="details-summary">Learn more about me</summary>
-                <p>I am a passionate <b>Data Scientist</b> and <b>Data Engineer</b> with over three years of experience in delivering data-driven solutions. My expertise includes:</p>
-                <ul>
-                    <li><b>Optimizing workflows</b> and building <b>ETL pipelines</b></li>
-                    <li>Deploying <b>machine learning models</b> to solve business challenges</li>
-                    <li>Creating insightful <b>visualizations</b> to drive better decision-making</li>
-                </ul>
-                <p>I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.</p>
-            </details>
-        </div>
+<div align="center">
+    <h1>Samarth Singh</h1>
+    <h3>Data Scientist | Data Engineer</h3>
+    <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
+</div>
 
-        <div class="section">
-            <h2>🛠 Skillset</h2>
-            <details>
-                <summary class="details-summary">View my skills</summary>
-                <ul>
-                    <li><b>Programming</b>: Python, SQL, R, PySpark, Dask</li>
-                    <li><b>Data Engineering</b>: Databricks, Apache Airflow, Azure Data Factory, Snowflake</li>
-                    <li><b>Machine Learning</b>: Regression, Time Series Forecasting, Decision Trees, SVM</li>
-                    <li><b>Visualization</b>: Tableau, Power BI</li>
-                    <li><b>Cloud Platforms</b>: Microsoft Azure, Google Cloud Platform</li>
-                    <li><b>Frameworks and Libraries</b>: TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib</li>
-                </ul>
-            </details>
-        </div>
+---
 
-        <div class="section">
-            <h2>🎓 Education</h2>
-            <details>
-                <summary class="details-summary">Explore my education</summary>
-                <table>
-                    <tr>
-                        <th>University</th>
-                        <th>Degree</th>
-                        <th>Timeline</th>
-                    </tr>
-                    <tr>
-                        <td>University of Maryland, College Park</td>
-                        <td>Master of Science, Data Science</td>
-                        <td>Aug 2024 – Dec 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Vellore Institute of Technology</td>
-                        <td>Bachelor of Technology, Computer Science</td>
-                        <td>Jul 2017 – Jun 2021</td>
-                    </tr>
-                </table>
-            </details>
-        </div>
+## 🌟 About Me
 
-        <div class="section">
-            <h2>🏆 Achievements & Certifications</h2>
-            <details>
-                <summary class="details-summary">See my achievements</summary>
-                <ul>
-                    <li><b>Spot Awards</b>: Recognized for Data Engineering Excellence at Mu Sigma</li>
-                    <li><b>NVIDIA NGC AI Technical Curriculum</b>: Completed advanced AI training</li>
-                </ul>
-            </details>
-        </div>
+<details>
+<summary><b>Learn more about me</b></summary>
 
-        <div class="section buttons">
-            <a href="mailto:samarth1@umd.edu" class="email">Email</a>
-            <a href="https://linkedin.com/in/samarth-singh-1776a1162" class="linkedin">LinkedIn</a>
-            <a href="https://github.com/samarthsingh1" class="github">GitHub</a>
-        </div>
+I am a passionate **Data Scientist** and **Data Engineer** with over three years of experience in delivering data-driven solutions. My expertise includes:
 
-        <div class="thank-you">
-            <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!">
-        </div>
-    </div>
-</body>
-</html>
+- **Optimizing workflows** and building **ETL pipelines**
+- Deploying **machine learning models** to solve business challenges
+- Creating insightful **visualizations** to drive better decision-making
+
+I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.
+
+</details>
+
+---
+
+## 🛠 Skillset
+
+<details>
+<summary><b>View my skills</b></summary>
+
+- **Programming**: Python, SQL, R, PySpark, Dask  
+- **Data Engineering**: Databricks, Apache Airflow, Azure Data Factory, Snowflake  
+- **Machine Learning**: Regression, Time Series Forecasting, Decision Trees, SVM  
+- **Visualization**: Tableau, Power BI  
+- **Cloud Platforms**: Microsoft Azure, Google Cloud Platform  
+- **Frameworks and Libraries**: TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib  
+
+</details>
+
+---
+
+## 🎓 Education
+
+<details>
+<summary><b>Explore my education</b></summary>
+
+| **University**                    | **Degree**                               | **Timeline**       |
+|------------------------------------|------------------------------------------|--------------------|
+| University of Maryland, College Park | Master of Science, Data Science           | Aug 2024 – Dec 2025 |
+| Vellore Institute of Technology     | Bachelor of Technology, Computer Science | Jul 2017 – Jun 2021 |
+
+</details>
+
+---
+
+## 💼 Professional Experience
+
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to explore my career highlights</summary>
+<div style="margin: 10px;">
+
+### **Data Scientist/Data Engineer | Mu Sigma Business Solutions**  
+*Jul 2021 – Aug 2024 | Bangalore, India*
+
+#### **Key Projects:**
+- **Procurement Analytics:**
+  - Built 15+ ETL pipelines using Apache Airflow, improving table refresh rates by 30%.
+  - Converted SQL procedures into PySpark scripts for improved accessibility.
+- **Supply Chain Analytics:**
+  - Created stock transfer models that increased inventory balance by 20%.
+  - Diagnosed and improved machine learning model recommendations for stakeholders.
+- **Perfect Store Analytics:**
+  - Automated audits with image recognition, cutting manual efforts by 50%.
+  - Designed Power BI dashboards that tracked 20+ KPIs globally.
+
+</div>
+</details>
+
+---
+
+## 🔥 Featured Projects
+
+<details>
+<summary style="font-size: 18px; font-weight: bold; color: #2d89ef;">Click to view my key projects</summary>
+<div style="margin: 10px;">
+
+### 📊 **[Consumer Complaint Prediction](https://github.com/samarthsingh1/data_insights)**
+- Compared the performance of **Logistic Regression** and **Random Forest Classifier** on consumer complaint data.
+- Conducted data preprocessing steps including encoding, feature scaling, and handling class imbalance through undersampling.
+- Evaluated key performance metrics such as **Accuracy**, **F1 Score**, **ROC AUC**, and **Precision/Recall**.
+- Highlighted the advantages of tree-based models for handling complex, non-linear relationships in data.
+- Linked visuals and insights through a comprehensive project report.
+
+### 🖼 **[Loan Application Classification](https://github.com/samarthsingh1/loan-application-classification)**
+- Implemented **LDA**, **Decision Tree**, **kNN**, and **SVM** classifiers for binary classification of loan applications.
+- Applied **PCA** to reduce dimensionality and analyzed its impact on the performance of kNN and SVM classifiers.
+- Evaluated classifiers on metrics like **Type 1 Error**, **Type 2 Error**, and overall **Accuracy** for original and PCA-reduced datasets.
+- Demonstrated SVM with PCA as the best-performing model, achieving a balance between error reduction and computational efficiency.
+- Summarized findings with detailed discussions and comparisons.
+
+</div>
+</details>
+
+---
+
+## 🏆 Achievements & Certifications
+
+<details>
+<summary><b>See my achievements</b></summary>
+
+- **Spot Awards**: Recognized for Data Engineering Excellence at Mu Sigma  
+- **NVIDIA NGC AI Technical Curriculum**: Completed advanced AI training  
+
+</details>
+
+---
+
+## 🌐 Connect with Me
+
+<div align="center">
+    <a href="mailto:samarth1@umd.edu">
+        <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail&logoColor=white" />
+    </a>
+    <a href="https://linkedin.com/in/samarth-singh-1776a1162">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" />
+    </a>
+    <a href="https://github.com/samarthsingh1">
+        <img src="https://img.shields.io/badge/GitHub-Visit-black?style=for-the-badge&logo=github&logoColor=white" />
+    </a>
+</div>
+
+---
+
+## 🎯 Portfolio Goals
+
+This portfolio showcases my work, skills, and accomplishments. Feel free to explore, connect, or collaborate on exciting data-driven projects!  
+
+<div align="center">
+    <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!" />
+</div>
