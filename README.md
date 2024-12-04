@@ -10,7 +10,7 @@
 
 ## 🌟 About Me
 
-<details>
+
 <summary><b>Learn more about me</b></summary>
 
 I am a passionate **Data Scientist** and **Data Engineer** with over three years of experience in delivering data-driven solutions. My expertise includes:
@@ -21,7 +21,6 @@ I am a passionate **Data Scientist** and **Data Engineer** with over three years
 
 I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.
 
-</details>
 
 ---
 
