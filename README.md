@@ -42,7 +42,7 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 
 ## 🎓 Education
 
-<details>
+
 <summary><b>Explore my education</b></summary>
 
 | **University**                    | **Degree**                               | **Timeline**       |
@@ -50,13 +50,12 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 | University of Maryland, College Park | Master of Science, Data Science           | Aug 2024 – Dec 2025 |
 | Vellore Institute of Technology     | Bachelor of Technology, Computer Science | Jul 2017 – Jun 2021 |
 
-</details>
 
 ---
 
 ## 💼 Professional Experience
 
-<details>
+
 <summary><b>View my experience</b></summary>
 
 ### **Data Scientist/Data Engineer | Mu Sigma Business Solutions**  
@@ -67,13 +66,13 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 - Designed advanced dashboards in **Power BI** and **Tableau** to visualize critical KPIs.  
 - Optimized **machine learning models**, enhancing supply chain predictions and boosting inventory efficiency by 20%.
 
-</details>
+
 
 ---
 
 ## 🔥 Featured Projects
 
-<details>
+
 <summary><b>Check out my projects</b></summary>
 
 ### 📊 **[Consumer Complaint Prediction](https://github.com/samarthsingh1/data_insights)**  
@@ -86,19 +85,19 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 - Applied **PCA** for dimensionality reduction and analyzed its impact on model accuracy.  
 - Showcased **SVM with PCA** as the most effective model for balancing performance and efficiency.  
 
-</details>
+
 
 ---
 
 ## 🏆 Achievements & Certifications
 
-<details>
+
 <summary><b>See my achievements</b></summary>
 
 - **Spot Awards**: Recognized for Data Engineering Excellence at Mu Sigma  
 - **NVIDIA NGC AI Technical Curriculum**: Completed advanced AI training  
 
-</details>
+
 
 ---
 
