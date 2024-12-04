@@ -26,7 +26,7 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 
 ## 🛠 Skillset
 
-<details>
+
 <summary><b>View my skills</b></summary>
 
 - **Programming**: Python, SQL, R, PySpark, Dask  
@@ -36,7 +36,7 @@ I specialize in scaling data-driven solutions to reduce manual effort and enable
 - **Cloud Platforms**: Microsoft Azure, Google Cloud Platform  
 - **Frameworks and Libraries**: TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib  
 
-</details>
+
 
 ---
 
