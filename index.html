@@ -11,7 +11,7 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        background: linear-gradient(135deg, #121212, #1f1f1f);
         color: #f5f5f5;
         min-height: 100vh;
         overflow-x: hidden;
@@ -23,10 +23,10 @@
     .container {
         max-width: 900px;
         margin: 40px 20px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
         padding: 30px;
         animation: fadeInUp 1s ease-out forwards;
         opacity: 0;
@@ -43,7 +43,7 @@
     h1, h2, h3 {
         margin-top: 0;
         font-weight: 700;
-        color: #fff;
+        color: #ffffff;
     }
 
     h1 {
@@ -63,7 +63,7 @@
         display: block;
         width: 60px;
         height: 3px;
-        background: #00bcd4;
+        background: #ff9800; /* Orange accent */
         margin-top: 8px;
         border-radius: 2px;
     }
@@ -72,7 +72,7 @@
         font-size: 1.4em;
         margin-top: 1.5em;
         margin-bottom: 0.5em;
-        color: #ffeb3b;
+        color: #4dd0e1; /* Teal accent */
     }
 
     p {
@@ -91,7 +91,7 @@
         border-collapse: collapse;
         width: 100%;
         margin: 1em 0;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.05);
         border-radius: 5px;
         overflow: hidden;
     }
@@ -108,7 +108,7 @@
     }
 
     th {
-        background: rgba(0,0,0,0.3);
+        background: rgba(255,255,255,0.1);
         font-weight: 700;
     }
 
@@ -120,17 +120,17 @@
     }
 
     ul li strong {
-        color: #ffeb3b;
+        color: #ff9800; /* Accent */
     }
 
     a {
-        color: #00bcd4;
+        color: #4dd0e1;
         text-decoration: none;
         transition: color 0.3s;
     }
 
     a:hover {
-        color: #ffeb3b;
+        color: #ff9800;
     }
 
     div[align="center"] {
@@ -268,9 +268,7 @@
     <h2>🎯 Portfolio Goals</h2>
     <p>This portfolio showcases my work, skills, and accomplishments. Feel free to explore, connect, or collaborate on exciting data-driven projects!</p>
 
-    <div align="center" class="footer-image">
-        <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!" />
-    </div>
+    
 </div>
 
 </body>
