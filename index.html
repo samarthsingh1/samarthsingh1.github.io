@@ -4,190 +4,326 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Samarth Singh - Portfolio</title>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
 <style>
     body {
-        font-family: Times New Roman, sans-serif;
+        font-family: 'Raleway', sans-serif;
         line-height: 1.6;
-        margin: 20px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
     }
+
+    /* Container */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Headings */
     h1, h2, h3 {
+        margin-top: 0;
+        font-weight: 700;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 2.2em;
         margin-bottom: 0.5em;
     }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        border-left: 5px solid #007acc;
+        padding-left: 10px;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+
     hr {
+        border: none;
+        border-top: 1px solid #ddd;
         margin: 2em 0;
     }
+
     table {
         border-collapse: collapse;
         width: 100%;
         margin: 1em 0;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
     }
     table, th, td {
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
     }
     th, td {
-        padding: 0.5em;
+        padding: 0.8em;
         text-align: left;
+        font-size: 0.95em;
     }
-    summary {
-        cursor: pointer;
-        font-weight: bold;
-        margin-top: 1em;
+    th {
+        background: #f0f0f0;
+        font-weight: 700;
     }
+
     ul {
         list-style-type: disc;
         margin-left: 2em;
+        margin-bottom: 1em;
     }
+
     img {
         max-width: 100%;
         height: auto;
     }
+
     div[align="center"] {
         text-align: center;
     }
+
     .badge-container img {
         margin: 0 5px;
+        transition: transform 0.2s ease;
+    }
+
+    .badge-container img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Summary (Toggle) sections */
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 1em;
+        font-size: 1.1em;
+        color: #007acc;
+        display: inline-block;
+        position: relative;
+    }
+
+    summary::after {
+        content: "▸";
+        display: inline-block;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    summary.opened::after {
+        transform: rotate(90deg);
+    }
+
+    /* Section content that gets toggled */
+    .toggle-section {
+        display: none;
+        padding: 10px 0;
+        margin-bottom: 1em;
+        animation: fadeIn 0.3s forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Card-like style for sections */
+    .section-block {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* Links */
+    a {
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer Image */
+    .footer-image {
+        margin-top: 2em;
     }
 </style>
 </head>
 <body>
 
-<h1>👋 Welcome to My Portfolio</h1>
+<div class="container">
+    <div align="center" class="section-block" style="margin-top:20px;">
+        <h1>Samarth Singh</h1>
+        <h3>Data Scientist | Data Engineer</h3>
+        <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
+    </div>
 
-<div align="center">
-    <h1>Samarth Singh</h1>
-    <h3>Data Scientist | Data Engineer</h3>
-    <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
+    <hr />
+
+    <h2>🌟 About Me</h2>
+    <summary><b>Learn more about me</b></summary>
+    <div class="toggle-section">
+        <p>I am a passionate <strong>Data Scientist</strong> and <strong>Data Engineer</strong> with over three years of experience in delivering data-driven solutions. My expertise includes:</p>
+        <ul>
+            <li><strong>Optimizing workflows</strong> and building <strong>ETL pipelines</strong></li>
+            <li>Deploying <strong>machine learning models</strong> to solve business challenges</li>
+            <li>Creating insightful <strong>visualizations</strong> to drive better decision-making</li>
+        </ul>
+        <p>I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.</p>
+    </div>
+
+    <hr />
+
+    <h2>🛠 Skillset</h2>
+    <summary><b>View my skills</b></summary>
+    <div class="toggle-section">
+        <ul>
+            <li><strong>Programming:</strong> Python, SQL, R, PySpark, Dask</li>
+            <li><strong>Data Engineering:</strong> Databricks, Apache Airflow, Azure Data Factory, Snowflake</li>
+            <li><strong>Machine Learning:</strong> Regression, Time Series Forecasting, Decision Trees, SVM</li>
+            <li><strong>Visualization:</strong> Tableau, Power BI</li>
+            <li><strong>Cloud Platforms:</strong> Microsoft Azure, Google Cloud Platform</li>
+            <li><strong>Frameworks and Libraries:</strong> TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib</li>
+        </ul>
+    </div>
+
+    <hr />
+
+    <h2>🎓 Education</h2>
+    <summary><b>Explore my education</b></summary>
+    <div class="toggle-section">
+        <table>
+            <tr>
+                <th><strong>University</strong></th>
+                <th><strong>Degree</strong></th>
+                <th><strong>Timeline</strong></th>
+            </tr>
+            <tr>
+                <td>University of Maryland, College Park</td>
+                <td>Master of Science, Data Science</td>
+                <td>Aug 2024 – Dec 2025</td>
+            </tr>
+            <tr>
+                <td>Vellore Institute of Technology</td>
+                <td>Bachelor of Technology, Computer Science</td>
+                <td>Jul 2017 – Jun 2021</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <h2>💼 Professional Experience</h2>
+    <summary><b>View my experience</b></summary>
+    <div class="toggle-section">
+        <h3>Data Scientist/Data Engineer | Mu Sigma Business Solutions</h3>
+        <p><strong>Jul 2021 – Aug 2024</strong> | Bangalore, India</p>
+        <ul>
+            <li>Built and deployed 15+ <strong>ETL pipelines</strong> with <strong>Apache Airflow</strong>, improving efficiency by 30%.</li>
+            <li>Automated <strong>image-based store audits</strong>, reducing manual efforts by 50%.</li>
+            <li>Designed advanced dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> to visualize critical KPIs.</li>
+            <li>Optimized <strong>machine learning models</strong>, enhancing supply chain predictions and boosting inventory efficiency by 20%.</li>
+        </ul>
+    </div>
+
+    <hr />
+
+    <h2>🔥 Featured Projects</h2>
+    <summary><b>Check out my projects</b></summary>
+    <div class="toggle-section">
+        <h3>📊 <a href="https://github.com/samarthsingh1/data_insights">Consumer Complaint Prediction</a></h3>
+        <ul>
+            <li>Conducted preprocessing steps like encoding, feature scaling, and undersampling to handle class imbalance.</li>
+            <li>Compared <strong>Logistic Regression</strong> and <strong>Random Forest Classifier</strong>, highlighting tree-based models’ advantages for non-linear relationships.</li>
+            <li>Evaluated performance metrics: <strong>Accuracy</strong>, <strong>F1 Score</strong>, <strong>ROC AUC</strong>, and <strong>Precision/Recall</strong>.</li>
+        </ul>
+
+        <h3>🖼 <a href="https://github.com/samarthsingh1/loan-application-classification">Loan Application Classification</a></h3>
+        <ul>
+            <li>Built classifiers (<strong>LDA</strong>, <strong>Decision Tree</strong>, <strong>kNN</strong>, <strong>SVM</strong>) to predict loan approval.</li>
+            <li>Applied <strong>PCA</strong> for dimensionality reduction and analyzed its impact on model accuracy.</li>
+            <li>Showcased <strong>SVM with PCA</strong> as the most effective model for balancing performance and efficiency.</li>
+        </ul>
+    </div>
+
+    <hr />
+
+    <h2>🏆 Achievements & Certifications</h2>
+    <summary><b>See my achievements</b></summary>
+    <div class="toggle-section">
+        <ul>
+            <li><strong>Spot Awards</strong>: Recognized for Data Engineering Excellence at Mu Sigma</li>
+            <li><strong>NVIDIA NGC AI Technical Curriculum</strong>: Completed advanced AI training</li>
+        </ul>
+    </div>
+
+    <hr />
+
+    <h2>🌐 Connect with Me</h2>
+    <div align="center" class="badge-container">
+        <a href="mailto:samarth1@umd.edu">
+            <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+        </a>
+        <a href="https://linkedin.com/in/samarth-singh-1776a1162">
+            <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+        </a>
+        <a href="https://github.com/samarthsingh1">
+            <img src="https://img.shields.io/badge/GitHub-Visit-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+        </a>
+    </div>
+
+    <hr />
+
+    <h2>🎯 Portfolio Goals</h2>
+    <p>This portfolio showcases my work, skills, and accomplishments. Feel free to explore, connect, or collaborate on exciting data-driven projects!</p>
+
+    <div align="center" class="footer-image">
+        <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!" />
+    </div>
 </div>
 
-<hr />
+<script>
+    // Select all summary elements
+    const summaries = document.querySelectorAll('summary');
 
-<h2>🌟 About Me</h2>
+    summaries.forEach(summary => {
+        // Find the next toggle-section after summary
+        let nextElement = summary.nextElementSibling;
+        // Initially keep them closed
+        if (nextElement && nextElement.classList.contains('toggle-section')) {
+            nextElement.style.display = 'none';
+        }
 
-<summary><b>Learn more about me</b></summary>
-
-<p>I am a passionate <strong>Data Scientist</strong> and <strong>Data Engineer</strong> with over three years of experience in delivering data-driven solutions. My expertise includes:</p>
-
-<ul>
-    <li><strong>Optimizing workflows</strong> and building <strong>ETL pipelines</strong></li>
-    <li>Deploying <strong>machine learning models</strong> to solve business challenges</li>
-    <li>Creating insightful <strong>visualizations</strong> to drive better decision-making</li>
-</ul>
-
-<p>I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.</p>
-
-<hr />
-
-<h2>🛠 Skillset</h2>
-
-<summary><b>View my skills</b></summary>
-
-<ul>
-    <li><strong>Programming:</strong> Python, SQL, R, PySpark, Dask</li>
-    <li><strong>Data Engineering:</strong> Databricks, Apache Airflow, Azure Data Factory, Snowflake</li>
-    <li><strong>Machine Learning:</strong> Regression, Time Series Forecasting, Decision Trees, SVM</li>
-    <li><strong>Visualization:</strong> Tableau, Power BI</li>
-    <li><strong>Cloud Platforms:</strong> Microsoft Azure, Google Cloud Platform</li>
-    <li><strong>Frameworks and Libraries:</strong> TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib</li>
-</ul>
-
-<hr />
-
-<h2>🎓 Education</h2>
-
-<summary><b>Explore my education</b></summary>
-
-<table>
-    <tr>
-        <th><strong>University</strong></th>
-        <th><strong>Degree</strong></th>
-        <th><strong>Timeline</strong></th>
-    </tr>
-    <tr>
-        <td>University of Maryland, College Park</td>
-        <td>Master of Science, Data Science</td>
-        <td>Aug 2024 – Dec 2025</td>
-    </tr>
-    <tr>
-        <td>Vellore Institute of Technology</td>
-        <td>Bachelor of Technology, Computer Science</td>
-        <td>Jul 2017 – Jun 2021</td>
-    </tr>
-</table>
-
-<hr />
-
-<h2>💼 Professional Experience</h2>
-
-<summary><b>View my experience</b></summary>
-
-<h3>Data Scientist/Data Engineer | Mu Sigma Business Solutions</h3>
-<p><strong>Jul 2021 – Aug 2024</strong> | Bangalore, India</p>
-<ul>
-    <li>Built and deployed 15+ <strong>ETL pipelines</strong> with <strong>Apache Airflow</strong>, improving efficiency by 30%.</li>
-    <li>Automated <strong>image-based store audits</strong>, reducing manual efforts by 50%.</li>
-    <li>Designed advanced dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> to visualize critical KPIs.</li>
-    <li>Optimized <strong>machine learning models</strong>, enhancing supply chain predictions and boosting inventory efficiency by 20%.</li>
-</ul>
-
-<hr />
-
-<h2>🔥 Featured Projects</h2>
-
-<summary><b>Check out my projects</b></summary>
-
-<h3>📊 <a href="https://github.com/samarthsingh1/data_insights">Consumer Complaint Prediction</a></h3>
-<ul>
-    <li>Conducted preprocessing steps like encoding, feature scaling, and undersampling to handle class imbalance.</li>
-    <li>Compared <strong>Logistic Regression</strong> and <strong>Random Forest Classifier</strong>, highlighting tree-based models’ advantages for non-linear relationships.</li>
-    <li>Evaluated performance metrics: <strong>Accuracy</strong>, <strong>F1 Score</strong>, <strong>ROC AUC</strong>, and <strong>Precision/Recall</strong>.</li>
-</ul>
-
-<h3>🖼 <a href="https://github.com/samarthsingh1/loan-application-classification">Loan Application Classification</a></h3>
-<ul>
-    <li>Built classifiers (<strong>LDA</strong>, <strong>Decision Tree</strong>, <strong>kNN</strong>, <strong>SVM</strong>) to predict loan approval.</li>
-    <li>Applied <strong>PCA</strong> for dimensionality reduction and analyzed its impact on model accuracy.</li>
-    <li>Showcased <strong>SVM with PCA</strong> as the most effective model for balancing performance and efficiency.</li>
-</ul>
-
-<hr />
-
-<h2>🏆 Achievements & Certifications</h2>
-
-<summary><b>See my achievements</b></summary>
-
-<ul>
-    <li><strong>Spot Awards</strong>: Recognized for Data Engineering Excellence at Mu Sigma</li>
-    <li><strong>NVIDIA NGC AI Technical Curriculum</strong>: Completed advanced AI training</li>
-</ul>
-
-<hr />
-
-<h2>🌐 Connect with Me</h2>
-
-<div align="center" class="badge-container">
-    <a href="mailto:samarth1@umd.edu">
-        <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-    </a>
-    <a href="https://linkedin.com/in/samarth-singh-1776a1162">
-        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-    </a>
-    <a href="https://github.com/samarthsingh1">
-        <img src="https://img.shields.io/badge/GitHub-Visit-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-    </a>
-</div>
-
-<hr />
-
-<h2>🎯 Portfolio Goals</h2>
-
-<p>This portfolio showcases my work, skills, and accomplishments. Feel free to explore, connect, or collaborate on exciting data-driven projects!</p>
-
-<div align="center">
-    <img src="https://via.placeholder.com/800x150?text=Thank+You+for+Visiting!" alt="Thanks for Visiting!" />
-</div>
-
+        // On click, toggle the visibility
+        summary.addEventListener('click', () => {
+            if (nextElement && nextElement.classList.contains('toggle-section')) {
+                const isVisible = nextElement.style.display === 'block';
+                // Toggle display
+                nextElement.style.display = isVisible ? 'none' : 'block';
+                // Toggle arrow direction on summary
+                if (isVisible) {
+                    summary.classList.remove('opened');
+                } else {
+                    summary.classList.add('opened');
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
