@@ -11,51 +11,79 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background: #f9f9f9;
-        color: #333;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #f5f5f5;
+        min-height: 100vh;
+        overflow-x: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
     }
 
-    /* Container */
     .container {
         max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
+        margin: 40px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        padding: 30px;
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
     }
 
-    /* Headings */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     h1, h2, h3 {
         margin-top: 0;
         font-weight: 700;
-        color: #333;
+        color: #fff;
     }
 
     h1 {
-        font-size: 2.2em;
-        margin-bottom: 0.5em;
+        font-size: 2.4em;
+        margin-bottom: 0.3em;
     }
 
     h2 {
         font-size: 1.8em;
         margin-top: 2em;
         margin-bottom: 0.5em;
-        border-left: 5px solid #007acc;
-        padding-left: 10px;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #00bcd4;
+        margin-top: 8px;
+        border-radius: 2px;
     }
 
     h3 {
         font-size: 1.4em;
         margin-top: 1.5em;
         margin-bottom: 0.5em;
+        color: #ffeb3b;
     }
 
     p {
         margin-bottom: 1em;
-        font-size: 1em;
+        font-size: 1.05em;
+        color: #e0e0e0;
     }
 
     hr {
         border: none;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid rgba(255,255,255,0.2);
         margin: 2em 0;
     }
 
@@ -63,20 +91,24 @@
         border-collapse: collapse;
         width: 100%;
         margin: 1em 0;
-        background: #fff;
+        background: rgba(255,255,255,0.1);
         border-radius: 5px;
         overflow: hidden;
     }
+
     table, th, td {
-        border: 1px solid #ddd;
+        border: 1px solid rgba(255,255,255,0.2);
     }
+
     th, td {
         padding: 0.8em;
         text-align: left;
         font-size: 0.95em;
+        color: #f5f5f5;
     }
+
     th {
-        background: #f0f0f0;
+        background: rgba(0,0,0,0.3);
         font-weight: 700;
     }
 
@@ -84,11 +116,21 @@
         list-style-type: disc;
         margin-left: 2em;
         margin-bottom: 1em;
+        color: #f5f5f5;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    ul li strong {
+        color: #ffeb3b;
+    }
+
+    a {
+        color: #00bcd4;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #ffeb3b;
     }
 
     div[align="center"] {
@@ -97,77 +139,29 @@
 
     .badge-container img {
         margin: 0 5px;
-        transition: transform 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 3px;
     }
 
     .badge-container img:hover {
         transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
 
-    /* Summary (Toggle) sections */
-    summary {
-        cursor: pointer;
-        font-weight: bold;
-        margin-top: 1em;
-        font-size: 1.1em;
-        color: #007acc;
-        display: inline-block;
-        position: relative;
-    }
-
-    summary::after {
-        content: "▸";
-        display: inline-block;
-        margin-left: 8px;
-        transition: transform 0.3s ease;
-    }
-
-    summary.opened::after {
-        transform: rotate(90deg);
-    }
-
-    /* Section content that gets toggled */
-    .toggle-section {
-        display: none;
-        padding: 10px 0;
-        margin-bottom: 1em;
-        animation: fadeIn 0.3s forwards;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* Card-like style for sections */
-    .section-block {
-        background: #fff;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 20px 0;
-        box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    /* Links */
-    a {
-        color: #007acc;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    /* Footer Image */
     .footer-image {
         margin-top: 2em;
+    }
+
+    .footer-image img {
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <div align="center" class="section-block" style="margin-top:20px;">
+    <div align="center" style="margin-top:20px;">
         <h1>Samarth Singh</h1>
         <h3>Data Scientist | Data Engineer</h3>
         <p>Turning data into impactful solutions through scalable pipelines and advanced analytics.</p>
@@ -176,101 +170,83 @@
     <hr />
 
     <h2>🌟 About Me</h2>
-    <summary><b>Learn more about me</b></summary>
-    <div class="toggle-section">
-        <p>I am a passionate <strong>Data Scientist</strong> and <strong>Data Engineer</strong> with over three years of experience in delivering data-driven solutions. My expertise includes:</p>
-        <ul>
-            <li><strong>Optimizing workflows</strong> and building <strong>ETL pipelines</strong></li>
-            <li>Deploying <strong>machine learning models</strong> to solve business challenges</li>
-            <li>Creating insightful <strong>visualizations</strong> to drive better decision-making</li>
-        </ul>
-        <p>I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.</p>
-    </div>
+    <p>I am a passionate <strong>Data Scientist</strong> and <strong>Data Engineer</strong> with over three years of experience in delivering data-driven solutions. My expertise includes:</p>
+    <ul>
+        <li><strong>Optimizing workflows</strong> and building <strong>ETL pipelines</strong></li>
+        <li>Deploying <strong>machine learning models</strong> to solve business challenges</li>
+        <li>Creating insightful <strong>visualizations</strong> to drive better decision-making</li>
+    </ul>
+    <p>I specialize in scaling data-driven solutions to reduce manual effort and enable smarter decisions for organizations.</p>
 
     <hr />
 
     <h2>🛠 Skillset</h2>
-    <summary><b>View my skills</b></summary>
-    <div class="toggle-section">
-        <ul>
-            <li><strong>Programming:</strong> Python, SQL, R, PySpark, Dask</li>
-            <li><strong>Data Engineering:</strong> Databricks, Apache Airflow, Azure Data Factory, Snowflake</li>
-            <li><strong>Machine Learning:</strong> Regression, Time Series Forecasting, Decision Trees, SVM</li>
-            <li><strong>Visualization:</strong> Tableau, Power BI</li>
-            <li><strong>Cloud Platforms:</strong> Microsoft Azure, Google Cloud Platform</li>
-            <li><strong>Frameworks and Libraries:</strong> TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib</li>
-        </ul>
-    </div>
+    <ul>
+        <li><strong>Programming:</strong> Python, SQL, R, PySpark, Dask</li>
+        <li><strong>Data Engineering:</strong> Databricks, Apache Airflow, Azure Data Factory, Snowflake</li>
+        <li><strong>Machine Learning:</strong> Regression, Time Series Forecasting, Decision Trees, SVM</li>
+        <li><strong>Visualization:</strong> Tableau, Power BI</li>
+        <li><strong>Cloud Platforms:</strong> Microsoft Azure, Google Cloud Platform</li>
+        <li><strong>Frameworks and Libraries:</strong> TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib</li>
+    </ul>
 
     <hr />
 
     <h2>🎓 Education</h2>
-    <summary><b>Explore my education</b></summary>
-    <div class="toggle-section">
-        <table>
-            <tr>
-                <th><strong>University</strong></th>
-                <th><strong>Degree</strong></th>
-                <th><strong>Timeline</strong></th>
-            </tr>
-            <tr>
-                <td>University of Maryland, College Park</td>
-                <td>Master of Science, Data Science</td>
-                <td>Aug 2024 – Dec 2025</td>
-            </tr>
-            <tr>
-                <td>Vellore Institute of Technology</td>
-                <td>Bachelor of Technology, Computer Science</td>
-                <td>Jul 2017 – Jun 2021</td>
-            </tr>
-        </table>
-    </div>
+    <table>
+        <tr>
+            <th><strong>University</strong></th>
+            <th><strong>Degree</strong></th>
+            <th><strong>Timeline</strong></th>
+        </tr>
+        <tr>
+            <td>University of Maryland, College Park</td>
+            <td>Master of Science, Data Science</td>
+            <td>Aug 2024 – Dec 2025</td>
+        </tr>
+        <tr>
+            <td>Vellore Institute of Technology</td>
+            <td>Bachelor of Technology, Computer Science</td>
+            <td>Jul 2017 – Jun 2021</td>
+        </tr>
+    </table>
 
     <hr />
 
     <h2>💼 Professional Experience</h2>
-    <summary><b>View my experience</b></summary>
-    <div class="toggle-section">
-        <h3>Data Scientist/Data Engineer | Mu Sigma Business Solutions</h3>
-        <p><strong>Jul 2021 – Aug 2024</strong> | Bangalore, India</p>
-        <ul>
-            <li>Built and deployed 15+ <strong>ETL pipelines</strong> with <strong>Apache Airflow</strong>, improving efficiency by 30%.</li>
-            <li>Automated <strong>image-based store audits</strong>, reducing manual efforts by 50%.</li>
-            <li>Designed advanced dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> to visualize critical KPIs.</li>
-            <li>Optimized <strong>machine learning models</strong>, enhancing supply chain predictions and boosting inventory efficiency by 20%.</li>
-        </ul>
-    </div>
+    <h3>Data Scientist/Data Engineer | Mu Sigma Business Solutions</h3>
+    <p><strong>Jul 2021 – Aug 2024</strong> | Bangalore, India</p>
+    <ul>
+        <li>Built and deployed 15+ <strong>ETL pipelines</strong> with <strong>Apache Airflow</strong>, improving efficiency by 30%.</li>
+        <li>Automated <strong>image-based store audits</strong>, reducing manual efforts by 50%.</li>
+        <li>Designed advanced dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> to visualize critical KPIs.</li>
+        <li>Optimized <strong>machine learning models</strong>, enhancing supply chain predictions and boosting inventory efficiency by 20%.</li>
+    </ul>
 
     <hr />
 
     <h2>🔥 Featured Projects</h2>
-    <summary><b>Check out my projects</b></summary>
-    <div class="toggle-section">
-        <h3>📊 <a href="https://github.com/samarthsingh1/data_insights">Consumer Complaint Prediction</a></h3>
-        <ul>
-            <li>Conducted preprocessing steps like encoding, feature scaling, and undersampling to handle class imbalance.</li>
-            <li>Compared <strong>Logistic Regression</strong> and <strong>Random Forest Classifier</strong>, highlighting tree-based models’ advantages for non-linear relationships.</li>
-            <li>Evaluated performance metrics: <strong>Accuracy</strong>, <strong>F1 Score</strong>, <strong>ROC AUC</strong>, and <strong>Precision/Recall</strong>.</li>
-        </ul>
+    <h3>📊 <a href="https://github.com/samarthsingh1/data_insights">Consumer Complaint Prediction</a></h3>
+    <ul>
+        <li>Conducted preprocessing steps like encoding, feature scaling, and undersampling to handle class imbalance.</li>
+        <li>Compared <strong>Logistic Regression</strong> and <strong>Random Forest Classifier</strong>, highlighting tree-based models’ advantages for non-linear relationships.</li>
+        <li>Evaluated performance metrics: <strong>Accuracy</strong>, <strong>F1 Score</strong>, <strong>ROC AUC</strong>, and <strong>Precision/Recall</strong>.</li>
+    </ul>
 
-        <h3>🖼 <a href="https://github.com/samarthsingh1/loan-application-classification">Loan Application Classification</a></h3>
-        <ul>
-            <li>Built classifiers (<strong>LDA</strong>, <strong>Decision Tree</strong>, <strong>kNN</strong>, <strong>SVM</strong>) to predict loan approval.</li>
-            <li>Applied <strong>PCA</strong> for dimensionality reduction and analyzed its impact on model accuracy.</li>
-            <li>Showcased <strong>SVM with PCA</strong> as the most effective model for balancing performance and efficiency.</li>
-        </ul>
-    </div>
+    <h3>🖼 <a href="https://github.com/samarthsingh1/loan-application-classification">Loan Application Classification</a></h3>
+    <ul>
+        <li>Built classifiers (<strong>LDA</strong>, <strong>Decision Tree</strong>, <strong>kNN</strong>, <strong>SVM</strong>) to predict loan approval.</li>
+        <li>Applied <strong>PCA</strong> for dimensionality reduction and analyzed its impact on model accuracy.</li>
+        <li>Showcased <strong>SVM with PCA</strong> as the most effective model for balancing performance and efficiency.</li>
+    </ul>
 
     <hr />
 
     <h2>🏆 Achievements & Certifications</h2>
-    <summary><b>See my achievements</b></summary>
-    <div class="toggle-section">
-        <ul>
-            <li><strong>Spot Awards</strong>: Recognized for Data Engineering Excellence at Mu Sigma</li>
-            <li><strong>NVIDIA NGC AI Technical Curriculum</strong>: Completed advanced AI training</li>
-        </ul>
-    </div>
+    <ul>
+        <li><strong>Spot Awards</strong>: Recognized for Data Engineering Excellence at Mu Sigma</li>
+        <li><strong>NVIDIA NGC AI Technical Curriculum</strong>: Completed advanced AI training</li>
+    </ul>
 
     <hr />
 
@@ -297,33 +273,5 @@
     </div>
 </div>
 
-<script>
-    // Select all summary elements
-    const summaries = document.querySelectorAll('summary');
-
-    summaries.forEach(summary => {
-        // Find the next toggle-section after summary
-        let nextElement = summary.nextElementSibling;
-        // Initially keep them closed
-        if (nextElement && nextElement.classList.contains('toggle-section')) {
-            nextElement.style.display = 'none';
-        }
-
-        // On click, toggle the visibility
-        summary.addEventListener('click', () => {
-            if (nextElement && nextElement.classList.contains('toggle-section')) {
-                const isVisible = nextElement.style.display === 'block';
-                // Toggle display
-                nextElement.style.display = isVisible ? 'none' : 'block';
-                // Toggle arrow direction on summary
-                if (isVisible) {
-                    summary.classList.remove('opened');
-                } else {
-                    summary.classList.add('opened');
-                }
-            }
-        });
-    });
-</script>
 </body>
 </html>
