@@ -12,7 +12,7 @@
         margin: 0;
         padding: 0;
         background: #121212; /* Dark background for game-like feel */
-        color: #FFA500; /* Orange text color for contrast */
+        color: #FFFFFF; /* Default text color set to white */
         min-height: 100vh;
         overflow-x: hidden;
         display: flex;
@@ -39,7 +39,7 @@
         animation: fadeInUp 1s ease-out forwards;
         opacity: 0;
         transform: translateY(20px);
-        color: #FFA500; /* Orange text color for all text */
+        color: #FFFFFF; /* Set general text color to white */
     }
     @keyframes fadeInUp {
         to {
@@ -47,15 +47,18 @@
             transform: translateY(0);
         }
     }
-    h1, h2, h3, p, li, a {
-        color: #FFA500; /* Ensuring all text is orange */
+    h1, h2, h3, strong { /* Only headings and strong/bold text are orange */
+        color: #FFA500;
+    }
+    p, li, a, table, th, td { /* Other text elements are white */
+        color: #FFFFFF;
     }
     a {
         text-decoration: none;
         transition: color 0.3s;
     }
     a:hover {
-        color: #FFFFFF; /* White for hover effects */
+        color: #FFA500; /* Hover effect for links */
     }
 </style>
 <!-- Load a specific stable version of Three.js -->
@@ -63,6 +66,7 @@
 </head>
 <body>
 <canvas id="canvas"></canvas>
+
 
 <div class="container">
     <div align="center" style="margin-top:20px;">
