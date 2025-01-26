@@ -11,8 +11,8 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #121212, #1f1f1f);
-        color: #f5f5f5;
+        background: #121212; /* Dark background for game-like feel */
+        color: #FFA500; /* Orange text color for contrast */
         min-height: 100vh;
         overflow-x: hidden;
         display: flex;
@@ -31,14 +31,15 @@
     .container {
         max-width: 900px;
         margin: 40px 20px;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.8); /* Slightly transparent black for readability */
         backdrop-filter: blur(8px);
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.75); /* Orange glow */
         padding: 30px;
         animation: fadeInUp 1s ease-out forwards;
         opacity: 0;
         transform: translateY(20px);
+        color: #FFA500; /* Orange text color for all text */
     }
     @keyframes fadeInUp {
         to {
@@ -46,8 +47,18 @@
             transform: translateY(0);
         }
     }
-    /* Additional styling */
+    h1, h2, h3, p, li, a {
+        color: #FFA500; /* Ensuring all text is orange */
+    }
+    a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    a:hover {
+        color: #FFFFFF; /* White for hover effects */
+    }
 </style>
+<!-- Load a specific stable version of Three.js -->
 <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
 </head>
 <body>
@@ -165,24 +176,31 @@
 <script>
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
     var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('canvas'), alpha: true});
+    renderer.setClearColor(0x000000, 0); // Background of the canvas, transparent
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
-    var cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    // Adding a more complex object
+    var geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+    var material = new THREE.MeshBasicMaterial({ color: 0xFFA500, wireframe: true });
+    var torusKnot = new THREE.Mesh(geometry, material);
+    scene.add(torusKnot);
 
-    camera.position.z = 5;
+    camera.position.z = 50;
 
     function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        torusKnot.rotation.x += 0.01;
+        torusKnot.rotation.y += 0.01;
         renderer.render(scene, camera);
     }
     animate();
+
+    window.addEventListener('resize', function () {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
 </script>
 </body>
 </html>
