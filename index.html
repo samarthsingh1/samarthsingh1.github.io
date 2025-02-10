@@ -72,9 +72,40 @@
     th {
         background-color: rgba(255, 165, 0, 0.5); /* Semi-transparent orange background for headers */
     }
+    .responsibilities-btn {
+        background-color: #FFA500;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+  .dropdown-content {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      padding: 10px;
+      color: white;
+  }
 </style>
 <!-- Load a specific stable version of Three.js -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js">
+function toggleDropdown(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === 'none') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+
+</script>
 </head>
 <body>
 <canvas id="canvas"></canvas>
@@ -134,14 +165,44 @@
     <hr />
 
     <h2>💼 Professional Experience</h2>
-    <h3>Data Scientist/Data Engineer | Mu Sigma Business Solutions</h3>
-    <p><strong>Jul 2021 – Aug 2024</strong> | Bangalore, India</p>
-    <ul>
-        <li>Built and deployed 15+ <strong>ETL pipelines</strong> with <strong>Apache Airflow</strong>, improving efficiency by 30%.</li>
-        <li>Automated <strong>image-based store audits</strong>, reducing manual efforts by 50%.</li>
-        <li>Designed advanced dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> to visualize critical KPIs.</li>
-        <li>Optimized <strong>machine learning models</strong>, enhancing supply chain predictions and boosting inventory efficiency by 20%.</li>
-    </ul>
+        <!-- Walmart USA - Procurement Analytics -->
+    <h3>Walmart USA - Procurement Analytics</h3>
+    <p>Optimized data workflow and performance for procurement analytics.</p>
+    <button class="responsibilities-btn" onclick="toggleDropdown('walmart-usa-details')">Responsibilities</button>
+    <div id="walmart-usa-details" class="dropdown-content">
+        <ul>
+            <li>Designed and deployed 15+ ETL pipelines for HIVE table refreshes using Apache Airflow, optimizing data workflow automation and performance.</li>
+            <li>Facilitated conversion of SQL procedures to PySpark scripts, improving table refresh rates by 30% and streamlining access for vertical projects.</li>
+            <li>Improved pre-existing SQL procedures in SAP HANA, optimizing query performance and enhancing data retrieval efficiency for business-critical processes.</li>
+            <li>Coached and Trained 10+ team members in Python and SQL, increasing team efficiency and reducing onboarding time by 20%.</li>
+        </ul>
+    </div>
+
+<!-- Mars USA - Supply Chain Analytics -->
+    <h3>Mars USA - Supply Chain Analytics</h3>
+    <p>Enhanced supply chain operations with advanced data analytics solutions.</p>
+    <button class="responsibilities-btn" onclick="toggleDropdown('mars-usa-details')">Responsibilities</button>
+    <div id="mars-usa-details" class="dropdown-content">
+        <ul>
+            <li>Spearheaded a Python-based Databricks Notebook for generating stock transfer orders, improving inventory balance by 20% across national Distribution Centers.</li>
+            <li>Diagnosed daily recommendations and prepared weekly reports analyzing the impact of machine learning model recommendations, enabling stakeholders to improve the process continuously.</li>
+            <li>Implemented partition overwriting on HIVE tables, enhancing query performance and preventing data bloating by optimizing data management processes.</li>
+            <li>Built a CI/CD pipeline in Azure Databricks, improving code integration, automated testing, and deployment processes.</li>
+        </ul>
+    </div>
+
+<!-- Mars Mexico - Perfect Store Analytics -->
+    <h3>Mars Mexico - Perfect Store Analytics</h3>
+    <p>Revolutionized retail operations with automated image recognition solutions.</p>
+    <button class="responsibilities-btn" onclick="toggleDropdown('mars-mexico-details')">Responsibilitie</button>
+    <div id="mars-mexico-details" class="dropdown-content">
+        <ul>
+            <li>Revamped and scaled automated store audits using image recognition in Python-based Databricks, reducing manual labor by 50% across countries.</li>
+            <li>Initiated and Designed an Azure Data Factory pipeline to automate scorecard generation for an Image Recognition model, reducing manual effort by 50% and aligning KPI calculations with business goals.</li>
+            <li>Optimized Power BI dashboards by staging tables in Dream.io and creating a model to track 20+ KPIs across countries, enhancing decision-making and improving refresh rates by 15%.</li>
+            <li>Developed and integrated 5+ visuals in a Power BI dashboard to display key performance indicators (KPIs), facilitating performance tracking and enhancing business insights.</li>
+        </ul>
+    </div>
 
     <hr />
 
@@ -217,6 +278,16 @@
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
+</script>
+<script>
+    function toggleDropdown(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
 </script>
 </body>
 </html>
