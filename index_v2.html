@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Singh - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #2c3e50;
+            min-height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .header-bar {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .cta-button {
+            background: white;
+            color: #1e3a8a;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .tech-competencies {
+            background: #f1f5f9;
+            border-top: 4px solid #1e3a8a;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tech-category {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #1e3a8a;
+        }
+
+        .tech-category-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+            font-size: 1.1rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .competency-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: #1e3a8a;
+        }
+
+        .competency-card.active {
+            border-color: #1e3a8a;
+            background: #f8fafc;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card-details {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .card-details.active {
+            display: block;
+        }
+
+        .detail-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .detail-list li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .detail-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #1e3a8a;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: #1e3a8a;
+        }
+
+        .timeline-item.active {
+            border-color: #1e3a8a;
+            background: #f8fafc;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 30px;
+            width: 12px;
+            height: 12px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-date {
+            color: #1e3a8a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .timeline-company {
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .timeline-details {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .timeline-details.active {
+            display: block;
+        }
+
+        .timeline-details h4 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .timeline-achievements {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline-achievements li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.5;
+        }
+
+        .timeline-achievements li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .expand-indicator {
+            float: right;
+            color: #1e3a8a;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item.active .expand-indicator {
+            transform: rotate(180deg);
+        }
+
+        .contact-section {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section .section-title {
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .experience-timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item::before {
+                left: -27px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-bar">
+        <div class="header-content">
+            <div class="logo">Samarth Singh</div>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#competencies" class="nav-link">Expertise</a>
+                <a href="#tech-competencies" class="nav-link">Technical Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Career Timeline</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Samarth Singh</h1>
+            <h2 class="hero-subtitle">Data Scientist | Data Engineer</h2>
+            <p class="hero-description">Transforming complex data into actionable insights through innovative analytics and scalable engineering solutions</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #1e3a8a, #3b82f6); border-radius: 50%; margin: 0 auto 30px auto; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">👨‍💻</div>
+                <p style="font-size: 1.2rem; color: #555; line-height: 1.8; margin-bottom: 30px;">
+                    I am a passionate Data Scientist and Data Engineer with over three years of experience transforming raw data into strategic business value. My journey began with a fascination for uncovering patterns in complex datasets, which has evolved into expertise in building enterprise-scale data solutions.
+                </p>
+                <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 30px;">
+                    I thrive on solving challenging problems through innovative analytics, whether it's developing predictive models that drive revenue growth, architecting real-time data pipelines, or creating intuitive dashboards that empower decision-makers across organizations.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">3+</div>
+                        <div style="color: #666; font-weight: 500;">Years Experience</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">50+</div>
+                        <div style="color: #666; font-weight: 500;">Projects Completed</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a;">10TB+</div>
+                        <div style="color: #666; font-weight: 500;">Data Processed Daily</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competencies" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency-card" onclick="toggleCompetency('engineering')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                            <path d="M2 17L12 22L22 17"/>
+                            <path d="M2 12L12 17L22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Data Engineering</h3>
+                    <p class="card-description">Building robust ETL pipelines and data infrastructure to support enterprise-scale analytics and reporting.</p>
+                    <div class="card-details" id="engineering-details">
+                        <h4 style="color: #1e3a8a; margin-bottom: 10px;">Key Capabilities:</h4>
+                        <ul class="detail-list">
+                            <li>Real-time data streaming pipelines</li>
+                            <li>Data warehouse design and optimization</li>
+                            <li>API development and integration</li>
+                            <li>Data quality monitoring and validation</li>
+                            <li>Cloud infrastructure management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card" onclick="toggleCompetency('datascience')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                            <path d="M9 11H7v8a2 2 0 002 2h8a2 2 0 002-2v-8h-2m-7 0V9a2 2 0 012-2h2a2 2 0 012 2v2m-6 0h6m-6 0l.01.01M15 11l.01.01"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m6 6h6m-6 6v6m-6-6H1"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Data Science</h3>
+                    <p class="card-description">End-to-end data science solutions from problem formulation to model deployment and monitoring in production environments.</p>
+                    <div class="card-details" id="datascience-details">
+                        <h4 style="color: #1e3a8a; margin-bottom: 10px;">Key Capabilities:</h4>
+                        <ul class="detail-list">
+                            <li>Exploratory data analysis and visualization</li>
+                            <li>Feature engineering and selection</li>
+                            <li>Model development and validation</li>
+                            <li>MLOps and model deployment pipelines</li>
+                            <li>Business problem solving with data</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card" onclick="toggleCompetency('analytics')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            <circle cx="7" cy="14" r="1"/>
+                            <circle cx="11" cy="11" r="1"/>
+                            <circle cx="14" cy="8" r="1"/>
+                            <circle cx="18" cy="8" r="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Advanced Data Analytics</h3>
+                    <p class="card-description">Statistical analysis and advanced analytical techniques to extract meaningful insights from complex datasets.</p>
+                    <div class="card-details" id="analytics-details">
+                        <h4 style="color: #1e3a8a; margin-bottom: 10px;">Key Capabilities:</h4>
+                        <ul class="detail-list">
+                            <li>Statistical hypothesis testing</li>
+                            <li>Time series analysis and forecasting</li>
+                            <li>A/B testing and experimentation</li>
+                            <li>Customer segmentation and clustering</li>
+                            <li>Causal inference and attribution modeling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card" onclick="toggleCompetency('machinelearning')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                            <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.73c.34.6.27 1.4-.27 1.73l-3.46 2c-.34.2-.77.2-1.11 0L15.27 16H14a7 7 0 01-7 7v1.73c-.6.34-1.4.27-1.73-.27l-2-3.46c-.2-.34-.2-.77 0-1.11L4.73 18V17a7 7 0 01-7-7H-3.73c-.34-.6-.27-1.4.27-1.73l3.46-2c.34-.2.77-.2 1.11 0L2.73 8H4a7 7 0 017-7V-0.73c.6-.34 1.4-.27 1.73.27l2 3.46c.2.34.2.77 0 1.11L13.27 2H12z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Machine Learning</h3>
+                    <p class="card-description">Developing and deploying machine learning models for predictive analytics, classification, and automated decision-making.</p>
+                    <div class="card-details" id="machinelearning-details">
+                        <h4 style="color: #1e3a8a; margin-bottom: 10px;">Key Capabilities:</h4>
+                        <ul class="detail-list">
+                            <li>Supervised and unsupervised learning algorithms</li>
+                            <li>Deep learning and neural networks</li>
+                            <li>Natural language processing</li>
+                            <li>Computer vision and image recognition</li>
+                            <li>Model optimization and hyperparameter tuning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-competencies" class="section tech-competencies">
+        <div class="container">
+            <h2 class="section-title">Technical Competencies</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Programming Languages</h3>
+                    <ul class="tech-list">
+                        <li>Python (Advanced)</li>
+                        <li>SQL (Expert)</li>
+                        <li>R (Intermediate)</li>
+                        <li>Scala (Intermediate)</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Data Engineering</h3>
+                    <ul class="tech-list">
+                        <li>Apache Spark</li>
+                        <li>Apache Kafka</li>
+                        <li>Apache Airflow</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Machine Learning</h3>
+                    <ul class="tech-list">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>MLflow</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Cloud Platforms</h3>
+                    <ul class="tech-list">
+                        <li>AWS (Certified)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Microsoft Azure</li>
+                        <li>Snowflake</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #1e3a8a; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; color: white;">🤖</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #2c3e50;">Customer Churn Prediction Model</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">Developed a machine learning model that predicts customer churn with 92% accuracy, helping reduce customer attrition by 25%.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Python</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Scikit-learn</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">AWS</span>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #1e3a8a; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; color: white;">📊</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #2c3e50;">Real-time Analytics Dashboard</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">Built an interactive dashboard processing 1M+ events per hour, providing real-time insights for business operations.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Apache Kafka</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Spark</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Tableau</span>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #1e3a8a; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; color: white;">⚡</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #2c3e50;">ETL Pipeline Optimization</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">Redesigned data processing pipeline, reducing execution time by 70% and improving data quality scores to 99.5%.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Apache Airflow</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">Docker</span>
+                        <span style="background: #e0f2fe; color: #0277bd; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <button onclick="showProjectsPage()" style="background: #1e3a8a; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Career Timeline</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item" onclick="toggleTimeline('senior')">
+                    <div class="timeline-date">2022 - Present</div>
+                    <h3 class="timeline-title">Senior Data Scientist <span class="expand-indicator">▼</span></h3>
+                    <div class="timeline-company">Enterprise Technology Solutions</div>
+                    <p class="timeline-description">Leading cross-functional teams in developing machine learning solutions that have improved operational efficiency by 35%. Responsible for architecting data pipelines processing 10TB+ daily data volumes.</p>
+                    <div class="timeline-details" id="senior-details">
+                        <h4>Key Achievements & Responsibilities:</h4>
+                        <ul class="timeline-achievements">
+                            <li>Led development of customer churn prediction model achieving 92% accuracy</li>
+                            <li>Architected real-time data streaming infrastructure processing 10TB+ daily</li>
+                            <li>Managed team of 5 data scientists and engineers across multiple projects</li>
+                            <li>Implemented MLOps practices reducing model deployment time by 80%</li>
+                            <li>Collaborated with C-suite executives on data strategy and roadmap</li>
+                            <li>Established data governance framework ensuring GDPR compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleTimeline('engineer')">
+                    <div class="timeline-date">2021 - 2022</div>
+                    <h3 class="timeline-title">Data Engineer <span class="expand-indicator">▼</span></h3>
+                    <div class="timeline-company">Analytics Consulting Group</div>
+                    <p class="timeline-description">Designed and implemented scalable ETL processes for Fortune 500 clients. Established data quality frameworks that reduced processing errors by 60%.</p>
+                    <div class="timeline-details" id="engineer-details">
+                        <h4>Key Achievements & Responsibilities:</h4>
+                        <ul class="timeline-achievements">
+                            <li>Built ETL pipelines for 15+ Fortune 500 clients using Apache Airflow</li>
+                            <li>Optimized data processing workflows reducing execution time by 70%</li>
+                            <li>Implemented data quality monitoring reducing errors from 5% to 0.2%</li>
+                            <li>Migrated legacy systems to cloud infrastructure (AWS/GCP)</li>
+                            <li>Developed automated testing frameworks for data validation</li>
+                            <li>Created documentation and training materials for client teams</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleTimeline('analyst')">
+                    <div class="timeline-date">2020 - 2021</div>
+                    <h3 class="timeline-title">Junior Data Analyst <span class="expand-indicator">▼</span></h3>
+                    <div class="timeline-company">Financial Services Corp</div>
+                    <p class="timeline-description">Developed automated reporting solutions and performed statistical analysis to support risk management and compliance initiatives.</p>
+                    <div class="timeline-details" id="analyst-details">
+                        <h4>Key Achievements & Responsibilities:</h4>
+                        <ul class="timeline-achievements">
+                            <li>Automated 20+ manual reporting processes saving 40 hours/week</li>
+                            <li>Performed statistical analysis on loan default risk models</li>
+                            <li>Created interactive dashboards for regulatory compliance reporting</li>
+                            <li>Conducted A/B testing for marketing campaign optimization</li>
+                            <li>Collaborated with risk management team on fraud detection algorithms</li>
+                            <li>Presented findings to senior management and regulatory bodies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>Ready to discuss how data-driven solutions can transform your business?</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <a href="mailto:samarth.singh@email.com" class="contact-link">samarth.singh@email.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <a href="https://linkedin.com/in/samarthsingh" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔗</div>
+                    <a href="https://github.com/samarthsingh" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleCompetency(competencyId) {
+            // Close all other competency details
+            const allCards = document.querySelectorAll('.competency-card');
+            const allDetails = document.querySelectorAll('.card-details');
+
+            allCards.forEach(card => card.classList.remove('active'));
+            allDetails.forEach(detail => detail.classList.remove('active'));
+
+            // Open the clicked competency
+            const clickedCard = event.currentTarget;
+            const detailsElement = document.getElementById(competencyId + '-details');
+
+            clickedCard.classList.add('active');
+            detailsElement.classList.add('active');
+        }
+
+        function toggleTimeline(timelineId) {
+            // Close all other timeline details
+            const allTimelineItems = document.querySelectorAll('.timeline-item');
+            const allTimelineDetails = document.querySelectorAll('.timeline-details');
+
+            allTimelineItems.forEach(item => item.classList.remove('active'));
+            allTimelineDetails.forEach(detail => detail.classList.remove('active'));
+
+            // Open the clicked timeline item
+            const clickedItem = event.currentTarget;
+            const detailsElement = document.getElementById(timelineId + '-details');
+
+            clickedItem.classList.add('active');
+            detailsElement.classList.add('active');
+        }
+
+        function showProjectsPage() {
+            // Create and show the projects page
+            const projectsPageHTML = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Projects - Samarth Singh</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+                    <style>
+                        body {
+                            box-sizing: border-box;
+                            font-family: 'Source Sans Pro', sans-serif;
+                            line-height: 1.6;
+                            margin: 0;
+                            padding: 0;
+                            background: #f8f9fa;
+                            color: #2c3e50;
+                            min-height: 100%;
+                        }
+                        html { height: 100%; }
+                        .header-bar {
+                            background: #1e3a8a;
+                            color: white;
+                            padding: 20px 0;
+                            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                        }
+                        .header-content {
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 0 20px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .logo {
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            letter-spacing: -0.5px;
+                        }
+                        .back-btn {
+                            background: #3b82f6;
+                            color: white;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            text-decoration: none;
+                            font-weight: 500;
+                        }
+                        .container {
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 60px 20px;
+                        }
+                        .page-title {
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                            text-align: center;
+                            margin-bottom: 20px;
+                            color: #1e3a8a;
+                        }
+                        .page-subtitle {
+                            text-align: center;
+                            color: #666;
+                            font-size: 1.1rem;
+                            margin-bottom: 50px;
+                        }
+                        .projects-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                            gap: 40px;
+                        }
+                        .project-card {
+                            background: white;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+                        .project-card:hover {
+                            transform: translateY(-8px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        .project-header {
+                            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+                            color: white;
+                            padding: 30px;
+                            text-align: center;
+                        }
+                        .project-icon {
+                            font-size: 3rem;
+                            margin-bottom: 15px;
+                        }
+                        .project-title {
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        .project-content {
+                            padding: 30px;
+                        }
+                        .project-description {
+                            color: #555;
+                            line-height: 1.7;
+                            margin-bottom: 25px;
+                        }
+                        .project-features {
+                            margin-bottom: 25px;
+                        }
+                        .project-features h4 {
+                            color: #1e3a8a;
+                            margin-bottom: 10px;
+                            font-size: 1rem;
+                        }
+                        .features-list {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        .features-list li {
+                            padding: 5px 0;
+                            color: #666;
+                            position: relative;
+                            padding-left: 20px;
+                        }
+                        .features-list li::before {
+                            content: "✓";
+                            position: absolute;
+                            left: 0;
+                            color: #1e3a8a;
+                            font-weight: bold;
+                        }
+                        .tech-tags {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 8px;
+                            margin-bottom: 25px;
+                        }
+                        .tech-tag {
+                            background: #e0f2fe;
+                            color: #0277bd;
+                            padding: 6px 14px;
+                            border-radius: 20px;
+                            font-size: 0.85rem;
+                            font-weight: 500;
+                        }
+                        .project-metrics {
+                            background: #f8fafc;
+                            padding: 20px;
+                            border-radius: 8px;
+                            margin-bottom: 20px;
+                        }
+                        .metrics-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                            gap: 15px;
+                            text-align: center;
+                        }
+                        .metric-value {
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            color: #1e3a8a;
+                        }
+                        .metric-label {
+                            font-size: 0.85rem;
+                            color: #666;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <header class="header-bar">
+                        <div class="header-content">
+                            <div class="logo">Samarth Singh - Projects</div>
+                            <button class="back-btn" onclick="window.close()">← Back to Portfolio</button>
+                        </div>
+                    </header>
+
+                    <div class="container">
+                        <h1 class="page-title">My Projects Portfolio</h1>
+                        <p class="page-subtitle">A comprehensive showcase of data science and engineering solutions</p>
+
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">🤖</div>
+                                    <h2 class="project-title">Customer Churn Prediction Model</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Developed an advanced machine learning model to predict customer churn for a telecommunications company,
+                                        enabling proactive retention strategies and significantly reducing customer attrition rates.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">92%</div>
+                                                <div class="metric-label">Accuracy</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">25%</div>
+                                                <div class="metric-label">Churn Reduction</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">$2M</div>
+                                                <div class="metric-label">Revenue Saved</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>Feature engineering with 50+ customer behavior variables</li>
+                                            <li>Ensemble model combining Random Forest and XGBoost</li>
+                                            <li>Real-time scoring API for immediate predictions</li>
+                                            <li>Automated model retraining pipeline</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">XGBoost</span>
+                                        <span class="tech-tag">AWS SageMaker</span>
+                                        <span class="tech-tag">Docker</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">📊</div>
+                                    <h2 class="project-title">Real-time Analytics Dashboard</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Built a comprehensive real-time analytics platform that processes millions of events per hour,
+                                        providing instant insights for business operations and enabling data-driven decision making.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">1M+</div>
+                                                <div class="metric-label">Events/Hour</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">&lt;100ms</div>
+                                                <div class="metric-label">Latency</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">99.9%</div>
+                                                <div class="metric-label">Uptime</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>Stream processing with Apache Kafka and Spark</li>
+                                            <li>Interactive visualizations with drill-down capabilities</li>
+                                            <li>Automated alerting and anomaly detection</li>
+                                            <li>Multi-tenant architecture supporting 100+ users</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Apache Kafka</span>
+                                        <span class="tech-tag">Apache Spark</span>
+                                        <span class="tech-tag">Tableau</span>
+                                        <span class="tech-tag">Redis</span>
+                                        <span class="tech-tag">Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">⚡</div>
+                                    <h2 class="project-title">ETL Pipeline Optimization</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Redesigned and optimized a legacy ETL pipeline processing terabytes of data daily,
+                                        dramatically improving performance and data quality while reducing operational costs.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">70%</div>
+                                                <div class="metric-label">Faster Processing</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">99.5%</div>
+                                                <div class="metric-label">Data Quality</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">50%</div>
+                                                <div class="metric-label">Cost Reduction</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>Parallel processing with Apache Airflow orchestration</li>
+                                            <li>Data quality monitoring and validation framework</li>
+                                            <li>Incremental loading strategies for large datasets</li>
+                                            <li>Comprehensive logging and error handling</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Apache Airflow</span>
+                                        <span class="tech-tag">Docker</span>
+                                        <span class="tech-tag">PostgreSQL</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">AWS S3</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">🎯</div>
+                                    <h2 class="project-title">Recommendation Engine</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Developed a sophisticated recommendation system for an e-commerce platform,
+                                        using collaborative filtering and deep learning to personalize user experiences.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">35%</div>
+                                                <div class="metric-label">CTR Increase</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">20%</div>
+                                                <div class="metric-label">Revenue Boost</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">5M+</div>
+                                                <div class="metric-label">Daily Users</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>Hybrid recommendation algorithm (collaborative + content-based)</li>
+                                            <li>Real-time personalization using TensorFlow</li>
+                                            <li>A/B testing framework for model evaluation</li>
+                                            <li>Cold start problem solutions for new users</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">TensorFlow</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Apache Spark</span>
+                                        <span class="tech-tag">MLflow</span>
+                                        <span class="tech-tag">GCP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">🔍</div>
+                                    <h2 class="project-title">Fraud Detection System</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Built an advanced fraud detection system for financial transactions using machine learning
+                                        and real-time monitoring to identify and prevent fraudulent activities.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">98%</div>
+                                                <div class="metric-label">Detection Rate</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">0.1%</div>
+                                                <div class="metric-label">False Positives</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">$5M</div>
+                                                <div class="metric-label">Fraud Prevented</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>Real-time transaction scoring with sub-second response</li>
+                                            <li>Anomaly detection using isolation forests</li>
+                                            <li>Graph-based network analysis for fraud rings</li>
+                                            <li>Adaptive learning from fraud analyst feedback</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">Apache Kafka</span>
+                                        <span class="tech-tag">Neo4j</span>
+                                        <span class="tech-tag">AWS Lambda</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-icon">📈</div>
+                                    <h2 class="project-title">Sales Forecasting Platform</h2>
+                                </div>
+                                <div class="project-content">
+                                    <p class="project-description">
+                                        Created an automated sales forecasting platform that combines time series analysis
+                                        with external factors to provide accurate demand predictions for inventory management.
+                                    </p>
+                                    <div class="project-metrics">
+                                        <div class="metrics-grid">
+                                            <div>
+                                                <div class="metric-value">15%</div>
+                                                <div class="metric-label">Forecast Accuracy</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">30%</div>
+                                                <div class="metric-label">Inventory Reduction</div>
+                                            </div>
+                                            <div>
+                                                <div class="metric-value">500+</div>
+                                                <div class="metric-label">SKUs Tracked</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-features">
+                                        <h4>Key Features:</h4>
+                                        <ul class="features-list">
+                                            <li>ARIMA and Prophet models for time series forecasting</li>
+                                            <li>External data integration (weather, holidays, events)</li>
+                                            <li>Automated model selection and hyperparameter tuning</li>
+                                            <li>Interactive forecasting dashboard with scenario planning</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Prophet</span>
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">Plotly</span>
+                                        <span class="tech-tag">Azure ML</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            `;
+
+            // Open the projects page in a new window
+            const projectsWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+            projectsWindow.document.write(projectsPageHTML);
+            projectsWindow.document.close();
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994c159471edf2e9',t:'MTc2MTUwNDA0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

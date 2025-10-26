@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Singh - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #2c3e50;
+            min-height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .header-bar {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .cta-button {
+            background: white;
+            color: #2c3e50;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #667eea;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 30px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .timeline-company {
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .skills-section {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            padding: 5px 0;
+            color: #666;
+        }
+
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section .section-title {
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .experience-timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item::before {
+                left: -27px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-bar">
+        <div class="header-content">
+            <div class="logo">Samarth Singh</div>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Samarth Singh</h1>
+            <h2 class="hero-subtitle">Data Scientist | Data Engineer</h2>
+            <p class="hero-description">Transforming complex data into actionable insights through innovative analytics and scalable engineering solutions</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Expertise</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">Data Analytics</h3>
+                    <p class="card-description">Advanced statistical analysis and machine learning model development to extract meaningful insights from complex datasets.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="card-title">Data Engineering</h3>
+                    <p class="card-description">Building robust ETL pipelines and data infrastructure to support enterprise-scale analytics and reporting.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3 class="card-title">Business Intelligence</h3>
+                    <p class="card-description">Creating comprehensive dashboards and visualization solutions that drive strategic business decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <h3 class="timeline-title">Senior Data Scientist</h3>
+                    <div class="timeline-company">Enterprise Technology Solutions</div>
+                    <p class="timeline-description">Leading cross-functional teams in developing machine learning solutions that have improved operational efficiency by 35%. Responsible for architecting data pipelines processing 10TB+ daily data volumes.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2022</div>
+                    <h3 class="timeline-title">Data Engineer</h3>
+                    <div class="timeline-company">Analytics Consulting Group</div>
+                    <p class="timeline-description">Designed and implemented scalable ETL processes for Fortune 500 clients. Established data quality frameworks that reduced processing errors by 60%.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2021</div>
+                    <h3 class="timeline-title">Junior Data Analyst</h3>
+                    <div class="timeline-company">Financial Services Corp</div>
+                    <p class="timeline-description">Developed automated reporting solutions and performed statistical analysis to support risk management and compliance initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python (Advanced)</li>
+                        <li>SQL (Expert)</li>
+                        <li>R (Intermediate)</li>
+                        <li>Scala (Intermediate)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Data Engineering</h3>
+                    <ul class="skill-list">
+                        <li>Apache Spark</li>
+                        <li>Apache Kafka</li>
+                        <li>Apache Airflow</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Machine Learning</h3>
+                    <ul class="skill-list">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>MLflow</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Cloud Platforms</h3>
+                    <ul class="skill-list">
+                        <li>AWS (Certified)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Microsoft Azure</li>
+                        <li>Snowflake</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>Ready to discuss how data-driven solutions can transform your business?</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <a href="mailto:samarth.singh@email.com" class="contact-link">samarth.singh@email.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <a href="https://linkedin.com/in/samarthsingh" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔗</div>
+                    <a href="https://github.com/samarthsingh" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994bf904f7aa0664',t:'MTc2MTUwMjg3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
