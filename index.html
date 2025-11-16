@@ -4,249 +4,327 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Samarth Singh - Data Scientist & Engineer</title>
-  <!-- Prism.js core + theme (Tomorrow Night theme is close to your image) -->
+  <!-- Prism.js core + theme -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
+  <!-- Font Awesome for professional icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
+      --grad-a: #4E5AFF;
+      --grad-b: #FF61E6;
+      --brand: #4E5AFF;          /* primary electric blue */
+      --brand-2: #FF61E6;        /* neon pink accent */
+      --muted: rgba(255,255,255,0.72);
+      --soft: rgba(255,255,255,0.08);
+      --soft-2: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.12);
 
-  --grad-a: #4E5AFF;
-  --grad-b: #FF61E6;
-  --brand: #4E5AFF;          /* primary electric blue */
-  --brand-2: #FF61E6;        /* neon pink accent */
-  --muted: rgba(255,255,255,0.72);
-  --soft: rgba(255,255,255,0.08);
-  --soft-2: rgba(255,255,255,0.04);
-  --border: rgba(255,255,255,0.12);
+      --surface: #0D1117;
+      --background: #000A19;
+      --error: #FF4C4C;
+      --on-primary: #FFFFFF;
+      --on-secondary: #000000;
+    }
 
-  /* new optional Material tokens */
-  --surface: #0D1117;
-  --background: #000A19;
-  --error: #FF4C4C;
-  --on-primary: #FFFFFF;
-  --on-secondary: #000000;
-  }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--background);
       color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
     }
-    a { color: var(--brand-2); }
+    a { color: var(--brand-2); text-decoration: none; }
     a:hover { color: var(--brand); }
 
-
     /* animated background */
-    .bg-animation{
-      position:fixed; inset:0; z-index:-1;
-      background:linear-gradient(45deg,var(--background),#0a0f24,var(--surface));
-      background-size:400% 400%;
-      animation:gradientShift 15s ease infinite;
+    .bg-animation {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(45deg, var(--background), #0a0f24, var(--surface));
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
     }
-    .bg-animation::before{
-      content:""; position:absolute; inset:0;
+    .bg-animation::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image:
         radial-gradient(circle at 20% 80%, rgba(120,119,198,.25) 0%, transparent 45%),
         radial-gradient(circle at 80% 20%, rgba(255,119,198,.22) 0%, transparent 45%),
         radial-gradient(circle at 40% 40%, rgba(120,219,255,.22) 0%, transparent 45%);
-      animation:float 20s ease-in-out infinite;
+      animation: float 20s ease-in-out infinite;
     }
-    @keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}33%{transform:translateY(-30px) rotate(.5deg)}66%{transform:translateY(15px) rotate(-.5deg)}}
+    @keyframes gradientShift {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0); }
+      33% { transform: translateY(-30px) rotate(.5deg); }
+      66% { transform: translateY(15px) rotate(-.5deg); }
+    }
 
     /* navbar */
-    .navbar{
-      position:fixed; inset-inline:0; top:0; z-index:1000;
-      background:rgba(0,0,0,.9);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--border);
-      padding:18px 0;
-      transition:background .3s ease;
+    .navbar {
+      position: fixed;
+      inset-inline: 0;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      transition: background .3s ease;
     }
-    .nav-container{
-      max-width:1400px; margin:0 auto; padding:0 40px;
-      display:flex; align-items:center; justify-content:space-between;
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
-    .logo{
-      font-size:1.8rem; font-weight:800;
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
       background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
     }
-    .nav-links{list-style:none; display:flex; gap:30px; margin:0; padding:0;}
-    .nav-link{
-      color:rgba(255,255,255,.9); text-decoration:none; font-weight:500; position:relative;
-      transition:color .25s ease;
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
     }
-    .nav-link:hover{color:var(--brand-2)}
-    .nav-link::after{
-      content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0;
+    .nav-link {
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color .25s ease;
+    }
+    .nav-link:hover { color: var(--brand-2); }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0;
       background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
-      transition:width .25s ease;
+      transition: width .25s ease;
     }
-    .nav-link:hover::after{width:100%}
+    .nav-link:hover::after { width: 100%; }
+
+    /* mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    /* theme toggle button (visual only for now) */
+    .theme-toggle {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.82rem;
+      z-index: 900;
+    }
 
     /* sections */
-    .section{padding:100px 0; border-bottom:1px solid var(--border)}
-    .container{max-width:1400px; margin:0 auto; padding:0 40px}
-    .section-header{text-align:center; margin-bottom:70px}
-    .section-title{
-      font-size:clamp(2rem,4vw,2.8rem); font-weight:700; margin:0 0 14px;
-      background:linear-gradient(135deg,#fff,var(--brand));
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    .section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+    .section-header { text-align: center; margin-bottom: 70px; }
+    .section-title {
+      font-size: clamp(2rem,4vw,2.8rem);
+      font-weight: 700;
+      margin: 0 0 14px;
+      background: linear-gradient(135deg,#fff,var(--brand));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .section-subtitle{color:var(--muted); font-size:1.08rem; max-width:640px; margin:0 auto}
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
 
     /* hero with profile */
-    .hero{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:140px 40px 110px}
-    .hero-inner{max-width:1200px; display:flex; flex-wrap:wrap; align-items:center; gap:60px; justify-content:center}
-    .hero-image{
-      flex:0 0 260px; height:260px; border-radius:50%; overflow:hidden;
-      border:4px solid rgba(168,85,247,.5); box-shadow:0 0 30px rgba(124,58,237,.35);
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 40px 110px;
     }
-    .hero-image img{width:100%; height:100%; object-fit:cover}
-    .hero-content{max-width:620px; text-align:center}
+    .hero-inner {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+      justify-content: center;
+    }
+    .hero-image {
+      flex: 0 0 260px;
+      height: 260px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(168,85,247,.5);
+      box-shadow: 0 0 30px rgba(124,58,237,.35);
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-content { max-width: 620px; text-align: center; }
     .hero-subtitle {
-  color: var(--brand);
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  margin-bottom: 10px;
-  font-size: clamp(1.4rem, 2.2vw, 2rem); /* was too small; now scales with screen size */
-  text-transform: uppercase;              /* gives a stronger presence */
-  text-shadow: 0 0 10px rgba(78,90,255,0.4); /* subtle electric glow */
-    }
-    .hero-title{
-      font-size:clamp(2.8rem,6vw,5rem); font-weight:800; margin:8px 0 16px;
-      background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    }
-    .hero-description{font-size:1.28rem; color:rgba(255,255,255,.86); line-height:1.6; margin-bottom:36px}
-    .cta-buttons{display:flex; gap:22px; justify-content:center; flex-wrap:wrap}
-    .cta-primary,.cta-secondary{
-      padding:14px 34px; border-radius:50px; font-weight:700; text-decoration:none; transition:.25s ease;
-    }
-    .cta-primary{background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%); color:#fff; box-shadow: 0 10px 28px rgba(78,90,255,0.45);}
-    .cta-primary:hover{transform:translateY(-3px); box-shadow:0 16px 38px rgba(168,85,247,.55)}
-    .cta-secondary{color:#fff; border:2px solid rgba(255,255,255,.32); background:rgba(255,255,255,.1); backdrop-filter:blur(10px)}
-    .cta-secondary:hover{border-color:var(--brand); background:rgba(255,255,255,.18)}
-
-    /* technical expertise (merged) */
-    .expertise-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:38px}
-    .expertise-card{
-      background:var(--soft-2); border:1px solid var(--border); border-radius:18px; padding:32px; transition:.25s;
-    }
-    .expertise-card:hover{transform:translateY(-6px); border-color:rgba(168,85,247,.4); box-shadow:0 20px 40px rgba(168,85,247,.18)}
-    .expertise-title{font-size:1.35rem; font-weight:800; color:var(--brand); margin:0 0 10px}
-    .expertise-desc{color:rgba(255,255,255,.85); margin:0 0 18px}
-    .tag-grid{display:flex; flex-wrap:wrap; gap:10px}
-    .tag{background:rgba(78,90,255,.18); border:1px solid rgba(78,90,255,.3); color:var(--brand); padding:7px 14px; border-radius:20px; font-size:.92rem; font-weight:600}
-
-    /* timeline (retained with expand) */
-    .timeline{position:relative; max-width:1000px; margin:0 auto}
-    .timeline::before{content:""; position:absolute; left:50%; top:0; bottom:0; width:4px; transform:translateX(-50%); background:linear-gradient(to bottom,var(--grad-a),var(--grad-b))}
-    .timeline-item{position:relative; margin-bottom:80px; width:50%; padding:0 40px; cursor:pointer}
-    .timeline-item:nth-child(odd){left:0; text-align:right}
-    .timeline-item:nth-child(even){left:50%; text-align:left}
-    .timeline-content{background:var(--soft-2); border:1px solid var(--border); border-radius:18px; padding:26px; transition:.25s; position:relative}
-    .timeline-item:hover .timeline-content{background:rgba(255,255,255,.08); border-color:rgba(78,90,255,.45); transform:scale(1.02)}
-    .timeline-dot{position:absolute; top:30px; width:20px; height:20px; background: linear-gradient(135deg, var(--grad-a), var(--grad-b)); border-radius:50%; border:4px solid #0a0a0a}
-    .timeline-item:nth-child(odd) .timeline-dot{right:-50px}
-    .timeline-item:nth-child(even) .timeline-dot{left:-50px}
-    .timeline-date{color:var(--brand); font-weight:700; font-size:.95rem; margin-bottom:6px}
-    .timeline-title{font-size:1.28rem; font-weight:800; margin:4px 0 8px}
-    .timeline-company{color:rgba(255,255,255,.85); font-weight:600; margin-bottom:12px}
-    .timeline-description{color:rgba(255,255,255,.75); line-height:1.55}
-    .expand-indicator{float:right; color:var(--brand); font-weight:900; transition:transform .25s}
-    .timeline-details{display:none; margin-top:18px; padding-top:16px; border-top:1px solid var(--border)}
-    .timeline-achievements{list-style:none; padding:0; margin:10px 0 0}
-    .timeline-achievements li{padding:8px 0 8px 26px; color:rgba(255,255,255,.86); position:relative; line-height:1.5}
-    .timeline-achievements li::before{content:"→"; position:absolute; left:0; color:var(--brand); font-weight:800}
-    .timeline-item.active .expand-indicator{transform:rotate(180deg)}
-    .timeline-details.active{display:block; animation:fadeIn .25s ease}
-    @keyframes fadeIn{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:translateY(0)}}
-
-    /* projects quick sample (kept minimal; you can expand later) */
-    .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:38px}
-    .project-card{background:var(--soft-2); border:1px solid var(--border); border-radius:18px; overflow:hidden; transition:.25s; cursor:pointer}
-    .project-card:hover{transform:translateY(-8px); border-color:rgba(78,90,255,.45); box-shadow:0 20px 42px rgba(78,90,255,.18)}
-    .project-header{padding:28px}
-    .project-icon{width:56px; height:56px; border-radius:14px; background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%); display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:16px}
-    .project-title{margin:0 0 10px; font-weight:800}
-    .project-title a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.25s ease;
-    }
-    .project-title a:hover {
       color: var(--brand);
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(78,90,255,0.4);
     }
-    .project-description{color:rgba(255,255,255,.8); line-height:1.55; margin:0 0 18px}
-    .project-tech{display:flex; flex-wrap:wrap; gap:8px}
-    .tech-tag{background:rgba(78,90,255,.18); border:1px solid rgba(78,90,255,.3); color:var(--brand); padding:6px 12px; border-radius:18px; font-size:.85rem; font-weight:600}
+    .hero-title {
+      font-size: clamp(2.8rem,6vw,5rem);
+      font-weight: 800;
+      margin: 8px 0 16px;
+      background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-description {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.86);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cta-primary,.cta-secondary {
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .25s ease;
+      font-size: 0.98rem;
+    }
+    .cta-primary {
+      background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(78,90,255,0.45);
+    }
+    .cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 38px rgba(168,85,247,.55);
+    }
+    .cta-secondary {
+      color: #fff;
+      border: 2px solid rgba(255,255,255,.32);
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+    }
+    .cta-secondary:hover {
+      border-color: var(--brand);
+      background: rgba(255,255,255,.18);
+    }
 
-    /* contact cards */
-    .contact-section{background: linear-gradient(135deg, rgba(78,90,255,.06), rgba(255,97,230,.06));}
-    .contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; max-width:900px; margin:48px auto 0}
-    .contact-card{background:var(--soft-2); border:1px solid var(--border); border-radius:16px; padding:28px; text-align:center; transition:.25s}
-    .contact-card:hover{transform:translateY(-3px); border-color:rgba(168,85,247,.35); box-shadow:0 12px 28px rgba(168,85,247,.18)}
-    .contact-icon{width:50px; height:50px; border-radius:50%; background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-size:1.15rem}
-    .contact-title{font-weight:700; margin:0 0 6px}
-    .contact-link{color:var(--muted); text-decoration:none}
-    .contact-link:hover{color:var(--brand)}
+    /* technical expertise */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 24px;
+    }
+    .expertise-card {
+      background: var(--soft-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      transition: .25s;
+    }
+    .expertise-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(168,85,247,.4);
+      box-shadow: 0 20px 40px rgba(168,85,247,.18);
+    }
+    .expertise-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brand);
+      margin: 0 0 8px;
+    }
+    .expertise-desc {
+      color: rgba(255,255,255,.85);
+      margin: 0 0 14px;
+      font-size: 0.98rem;
+    }
+    .tag-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      background: rgba(78,90,255,.18);
+      border: 1px solid rgba(78,90,255,.3);
+      color: var(--brand);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: .84rem;
+      font-weight: 600;
+    }
 
-    /* web form */
-    .contact-form{max-width:720px; margin:58px auto 0; background:var(--soft-2); border:1px solid var(--border); border-radius:16px; padding:38px}
-    .contact-form .row{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    .contact-form label{display:block; font-weight:700; margin-bottom:6px}
-    .contact-form input,.contact-form textarea{
-      width:100%; border-radius:10px; border:1px solid rgba(255,255,255,.22);
-      background:rgba(255,255,255,.1); color:#fff; padding:14px; font-size:1rem; outline:none;
-    }
-    .contact-form textarea{min-height:140px; resize:vertical}
-    .contact-form button{
-      margin-top:6px; background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%); border:none; color:#fff;
-      padding:14px 28px; border-radius:40px; font-weight:800; cursor:pointer; transition:.25s;
-    }
-    .contact-form button:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(168,85,247,.28)}
-    .form-note{color:var(--muted); font-size:.92rem; margin-top:10px; text-align:center}
-
-    /* responsive */
-    @media (max-width:768px){
-      .nav-container{padding:0 20px}
-      .hero{padding:130px 20px 90px}
-      .hero-inner{flex-direction:column}
-      .container{padding:0 20px}
-      .timeline::before{left:10px}
-      .timeline-item{width:100%; left:0!important; text-align:left!important; padding-left:60px; padding-right:20px}
-      .timeline-dot{left:10px!important; right:auto!important}
-      .contact-form .row{grid-template-columns:1fr}
-    }
     /* --- ABOUT ME--- */
     .about-section {
       position: relative;
       z-index: 1;
       background: linear-gradient(180deg, var(--background) 0%, var(--surface) 100%);
-      padding: 140px 0 160px;
+      padding: 120px 0 140px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-
     .about-section::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(150, 90, 255, 0.15), transparent 60%),
-                  radial-gradient(circle at bottom right, rgba(102, 126, 234, 0.18), transparent 60%);
+      background:
+        radial-gradient(circle at top left, rgba(150, 90, 255, 0.15), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(102, 126, 234, 0.18), transparent 60%);
       z-index: 0;
     }
-
     .about-section .container {
       position: relative;
       z-index: 2;
     }
-
     .about-section .section-title {
       color: #d5b3ff !important;
       background: none !important;
@@ -255,42 +333,14 @@
       margin-bottom: 10px;
       text-shadow: 0 0 8px rgba(213, 179, 255, 0.25);
     }
-
     .about-section .section-subtitle {
       color: rgba(213, 179, 255, 0.75);
       font-style: italic;
-      margin-bottom: 50px;
-      font-size: 1.05rem;
+      margin-bottom: 40px;
+      font-size: 1rem;
     }
 
-    /* Enhanced code window */
-    .code-window {
-      max-width: 880px;
-      margin: 0 auto;
-      background: #0d1117;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      overflow: hidden;
-      font-family: 'JetBrains Mono', monospace;
-      color: #c9d1d9;
-      box-shadow: 0 0 60px rgba(140, 90, 255, 0.25);
-    }
-        /* Enhanced font sizing and aesthetics for Prism.js code */
-    pre[class*="language-"] {
-      margin: 0;
-      padding: 32px 36px;
-      background: transparent !important;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.1rem;           /* ↑ bump from 1rem to 1.1rem */
-      font-weight: 450;            /* slightly thicker for better readability */
-      line-height: 1.9;            /* add more breathing space */
-      letter-spacing: 0.15px;      /* subtle spacing */
-      overflow-x: auto;
-      white-space: pre;
-      color: #c9d1d9;
-      text-shadow: 0 0 2px rgba(0,0,0,0.25); /* gentle anti-alias effect */
-    }
-
+    /* Code window + Prism */
     .code-window {
       max-width: 880px;
       margin: 0 auto;
@@ -298,28 +348,450 @@
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 0 50px rgba(110, 70, 255, 0.25);
+      font-family: 'JetBrains Mono', monospace;
+      color: #c9d1d9;
+      box-shadow: 0 0 40px rgba(110, 70, 255, 0.25);
     }
-
+    pre[class*="language-"] {
+      margin: 0;
+      padding: 24px 20px;
+      background: transparent !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 450;
+      line-height: 1.8;
+      letter-spacing: 0.15px;
+      overflow-x: auto;
+      white-space: pre;
+      color: #c9d1d9;
+      text-shadow: 0 0 2px rgba(0,0,0,0.25);
+    }
     .code-header {
       background: #161b22;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      padding: 10px 16px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 1rem;            /* consistent with page font scale */
+      font-size: 0.9rem;
       color: #8b949e;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
     .compile-status {
       color: #2ea043;
       font-weight: 600;
     }
 
+    /* EXPERIENCE: vertical card layout (Work & Education) */
+    .experience-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.7fr);
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .experience-column {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .experience-group-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .experience-card {
+      background: var(--soft-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-left: 3px solid var(--brand);
+      opacity: 0.95;
+      pointer-events: none;
+    }
+    .experience-card-inner {
+      position: relative;
+    }
 
+    .experience-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 2px 0 8px;
+    }
+    .experience-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: rgba(78,90,255,0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+    }
+    .experience-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
+    .experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    .experience-role {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin: 0 0 2px;
+      color: #ffffff;
+    }
+    .experience-company {
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0;
+      font-size: 0.96rem;
+    }
+    .experience-summary {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.94rem;
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+    .experience-points {
+      list-style: none;
+      margin: 8px 0 0;
+      padding: 0;
+    }
+    .experience-points li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 5px;
+      color: rgba(255,255,255,0.86);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .experience-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--brand-2);
+      font-size: 1.1rem;
+    }
+    .experience-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(78,90,255,0.55);
+      box-shadow: 0 18px 38px rgba(78,90,255,0.25);
+    }
+
+    /* Projects: vertical cards */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: var(--soft-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(78,90,255,0.55);
+      box-shadow: 0 20px 42px rgba(78,90,255,0.22);
+    }
+    .project-header {
+      padding: 20px 18px;
+    }
+
+    .project-header-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .project-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(78,90,255,0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    .project-title {
+      margin: 0;
+      font-weight: 800;
+      color: #ffffff;
+      font-size: 1.02rem;
+    }
+    .project-title a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .project-title a:hover {
+      color: var(--brand);
+    }
+    .project-description {
+      color: rgba(255,255,255,.8);
+      line-height: 1.5;
+      margin: 0 0 14px;
+      font-size: 0.94rem;
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tech-tag {
+      background: rgba(78,90,255,.18);
+      border: 1px solid rgba(78,90,255,.3);
+      color: var(--brand);
+      padding: 5px 10px;
+      border-radius: 18px;
+      font-size: .8rem;
+      font-weight: 600;
+    }
+
+    /* contact cards */
+    .contact-section {
+      background: linear-gradient(135deg, rgba(78,90,255,.06), rgba(255,97,230,.06));
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+    .contact-card {
+      background: var(--soft-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+      transition: .25s;
+    }
+    .contact-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(168,85,247,.35);
+      box-shadow: 0 12px 28px rgba(168,85,247,.18);
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      margin: 0 auto 8px;
+      background: rgba(78,90,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .contact-title {
+      font-weight: 700;
+      margin: 0 0 4px;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    .contact-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .contact-link:hover { color: var(--brand); }
+
+    /* web form */
+    .contact-form {
+      max-width: 720px;
+      margin: 40px auto 0;
+      background: var(--soft-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .contact-form .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+    .contact-form input,.contact-form textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      padding: 10px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .contact-form button {
+      margin-top: 6px;
+      background: linear-gradient(135deg, #4E5AFF 0%, #FF61E6 100%);
+      border: none;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 40px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s;
+      font-size: 0.95rem;
+    }
+    .contact-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(168,85,247,.28);
+    }
+    .form-note {
+      color: var(--muted);
+      font-size: .86rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* responsive */
+    @media (max-width: 1024px) {
+      .nav-container { padding: 0 24px; }
+      .container { padding: 0 24px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 16px;
+      }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: rgba(0,0,0,0.96);
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px 16px;
+        border-bottom: 1px solid var(--border);
+        display: none;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero {
+        padding: 120px 16px 80px;
+      }
+      .hero-inner {
+        flex-direction: column;
+        gap: 36px;
+      }
+      .hero-image {
+        flex: 0 0 210px;
+        height: 210px;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+      .section {
+        padding: 80px 0;
+      }
+      .section-header {
+        margin-bottom: 46px;
+      }
+      .code-window {
+        border-radius: 12px;
+      }
+      .experience-card {
+        padding: 18px 16px 16px;
+      }
+      .projects-grid {
+        gap: 16px;
+      }
+      .project-header {
+        padding: 18px 16px;
+      }
+      .contact-grid {
+        gap: 16px;
+      }
+      .theme-toggle {
+        right: 12px;
+        bottom: 12px;
+        font-size: 0.78rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.4rem;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-description {
+        font-size: 0.98rem;
+      }
+      .cta-primary,
+      .cta-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .contact-form .row {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 0 14px;
+      }
+    }
+
+    @media (max-width:900px) {
+      .experience-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -329,7 +801,10 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">Samarth Singh</div>
-      <ul class="nav-links">
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a class="nav-link" href="#home">Home</a></li>
         <li><a class="nav-link" href="#expertise">Technical</a></li>
         <li><a class="nav-link" href="#experience">Experience</a></li>
@@ -338,7 +813,8 @@
       </ul>
     </div>
   </nav>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">"Toggle Theme"</button>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Toggle Theme</button>
 
   <!-- HERO -->
   <section id="home" class="hero">
@@ -347,7 +823,7 @@
         <img src="img/profile.jpg" alt="Samarth Singh profile picture">
       </div>
       <div class="hero-content">
-        <div class="hero-subtitle">Data Scientist & Engineer</div>
+        <div class="hero-subtitle">Data Scientist &amp; Engineer</div>
         <h1 class="hero-title">Transforming Data Into Intelligence</h1>
         <p class="hero-description">
           I architect scalable data solutions and build intelligent systems that turn complex datasets
@@ -360,6 +836,7 @@
       </div>
     </div>
   </section>
+
   <!-- ABOUT ME -->
   <section id="about" class="section about-section">
     <div class="container">
@@ -370,298 +847,345 @@
         </p>
       </div>
 
-    <div class="code-window">
-      <div class="code-header">
-        <span class="file-name">about_me.py</span>
-        <span class="compile-status">✔ compiled successfully</span>
+      <div class="code-window">
+        <div class="code-header">
+          <span class="file-name">about_me.py</span>
+          <span class="compile-status">✔ compiled successfully</span>
+        </div>
+        <pre class="code-content"><code class="language-javascript">
+/* I am a dynamic Data Scientist / Data Engineer with close to 4 yearsof hands-on experience in building
+   scalable data solutions across Microsoft Azure, Databricks, and Google Cloud Services for Fortune 500
+   Retail and Supply Chain clients. Proficient in data analysis, data visualization, and data warehousing
+  using tools like SQL, Python, and Power BI. */
+
+if (problem === "unsolvable") {
+  solution = drinkCoffee() + thinkHarder();
+  return "Actually, it's possible!";
+}
+        </code></pre>
       </div>
-      <pre class="code-content"><code class="language-javascript">/* I am a thoughtful and dependable data scientist and engineer who values clarity,
-    collaboration, and consistency. I enjoy translating complex data problems into elegant,
-    scalable systems that make organizations smarter and faster. I take the time to
-    understand how each component fits within the bigger data architecture and constantly
-    look for ways to improve reliability and efficiency. I care deeply about writing clean,
-    maintainable code and building analytical platforms that people can trust. */
-
-    if (problem === "unsolvable") {
-      solution = drinkCoffee() + thinkHarder();
-      return "Actually, it's possible!";
-    }
-    </code></pre>
     </div>
-
-
   </section>
 
-  <!-- EXPERIENCE (Timeline retained) -->
+  <!-- EXPERIENCE: Education then Work Experience -->
   <section id="experience" class="section">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Career Journey</h2>
-        <p class="section-subtitle">A progressive path through data science and engineering roles, delivering impactful solutions</p>
-      </div>
-  <div class="timeline">
 
-    <!-- AARP -->
-    <div class="timeline-item" data-toggle="aarp">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">June 2025 – Present</div>
-        <h3 class="timeline-title">Data Engineer Intern <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">AARP – Data & Analytics Group, Washington DC</div>
-        <p class="timeline-description">
-          Building production-grade data pipelines and ML monitoring systems for enterprise-scale analytics.
+      <!-- EDUCATION -->
+      <div class="section-header" style="margin-bottom: 40px;">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">
+          Academic foundations in computer science and data science that power my applied work.
         </p>
-        <div id="aarp" class="timeline-details">
-          <h4 style="color:var(--brand);margin:0 0 10px">Key Highlights</h4>
-          <ul class="timeline-achievements">
-            <li>Engineered Random Forest model in Spark MLlib → maintained > 50% cluster CPU utilization.</li>
-            <li>Automated Databricks administration via Flask + REST APIs → productivity ↑ 10%.</li>
-            <li>Developed real-time model drift monitoring dashboard for 20+ production models.</li>
-            <li>Deployed agentic AI ticket management system using Kafka and Docker.</li>
-          </ul>
+      </div>
+
+      <div class="experience-list">
+        <!-- UMD -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">Master of Science in Data Science</h3>
+                <div class="experience-company">University of Maryland, College Park</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Aug 2024 – May 2026</span>
+              <span class="experience-location">College Park, MD</span>
+            </div>
+            <p class="experience-summary">
+              Graduate coursework and projects focused on machine learning, big data systems, and AI applications.
+            </p>
+            <ul class="experience-points">
+              <li>Principles of Machine Learning – advanced modeling, inference, and evaluation.</li>
+              <li>Data Engineering and Big Data Analytics – Spark, Kafka, Databricks, and modern pipelines.</li>
+              <li>Cloud infrastructure modules across Azure and AWS data ecosystems.</li>
+              <li>Applied projects in time series forecasting and natural language processing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- VIT -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">B.Tech – Computer Science &amp; Engineering</h3>
+                <div class="experience-company">Vellore Institute of Technology</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Jul 2017 – Jun 2021</span>
+              <span class="experience-location">Vellore, India</span>
+            </div>
+            <p class="experience-summary">
+              Built a strong foundation in computer science while actively contributing to student organizations.
+            </p>
+            <ul class="experience-points">
+              <li>Graduated with distinction and contributed to data visualization projects in Python.</li>
+              <li>Active member of Youth Red Cross and university technology clubs.</li>
+              <li>Participated in hackathons and community-focused, data-driven initiatives.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- UMD -->
-    <div class="timeline-item" data-toggle="umd">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Aug 2024 – May 2026</div>
-        <h3 class="timeline-title">Master of Science in Data Science <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">University of Maryland, College Park (MD)</div>
-        <p class="timeline-description">
-          Graduate coursework and research focusing on Machine Learning, Big Data Systems, and AI Applications.
+      <!-- WORK EXPERIENCE -->
+      <div class="section-header" style="margin: 80px 0 40px;">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">
+          Hands-on experience delivering data science and engineering solutions at scale.
         </p>
-        <div id="umd" class="timeline-details">
-          <h4 style="color:var(--brand);margin:0 0 10px">Focus Areas</h4>
-          <ul class="timeline-achievements">
-            <li>Principles of Machine Learning – Advanced Modeling and Inference</li>
-            <li>Data Engineering and Big Data Analytics – Spark, Kafka, Databricks</li>
-            <li>Cloud Infrastructure – Azure and AWS Data Ecosystems</li>
-            <li>Time Series Forecasting and Natural Language Processing Projects</li>
-          </ul>
+      </div>
+
+      <div class="experience-list">
+        <!-- AARP -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">Data Engineer Intern</h3>
+                <div class="experience-company">AARP – Data &amp; Analytics Group</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">June 2025 – Present</span>
+              <span class="experience-location">Washington, DC</span>
+            </div>
+            <p class="experience-summary">
+              Building production-grade data pipelines and ML monitoring systems for enterprise-scale analytics.
+            </p>
+            <ul class="experience-points">
+              <li>Engineered a Random Forest model in Spark MLlib to maintain more than 50 percent cluster CPU utilization.</li>
+              <li>Automated Databricks administration via Flask and REST APIs, improving productivity by 10 percent.</li>
+              <li>Developed a real-time model drift monitoring dashboard for more than 20 production models.</li>
+              <li>Deployed an agentic AI ticket management system using Kafka and Docker.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mu Sigma – Senior Data Scientist (Procurement Analytics) -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">Senior Data Scientist – Procurement Analytics</h3>
+                <div class="experience-company">Mu Sigma Business Solutions – Walmart USA</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Aug 2023 – Jun 2024</span>
+              <span class="experience-location">Bengaluru, India</span>
+            </div>
+            <p class="experience-summary">
+              Designed and deployed ETL pipelines on BigQuery to optimize procurement reporting and governance.
+            </p>
+            <ul class="experience-points">
+              <li>Converted legacy SQL procedures to PySpark, improving refresh speed by 30 percent.</li>
+              <li>Reduced manual reporting effort by 40 percent using Airflow-scheduled pipelines.</li>
+              <li>Led cross-functional stakeholder reviews and agile backlog planning for procurement analytics.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mu Sigma – Data Scientist (Supply Chain Analytics) -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">Data Scientist – Supply Chain Analytics</h3>
+                <div class="experience-company">Mu Sigma Business Solutions – Mars USA</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Jan 2023 – Aug 2023</span>
+              <span class="experience-location">Bengaluru, India</span>
+            </div>
+            <p class="experience-summary">
+              Deployed optimization models and dashboards to improve national warehouse balance and inventory flows.
+            </p>
+            <ul class="experience-points">
+              <li>Implemented GUROBI-based linear optimization, reducing stock imbalance by 20 percent.</li>
+              <li>Enhanced solver stability with dimensionality reduction, improving accuracy by 4 percent.</li>
+              <li>Delivered Power BI KPI dashboards, increasing stakeholder adoption by 15 percent.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mu Sigma – Data Scientist (Retail Analytics) -->
+        <div class="experience-card">
+          <div class="experience-card-inner">
+            <div class="experience-header">
+              <div class="experience-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="experience-heading">
+                <h3 class="experience-role">Data Scientist – Retail Analytics</h3>
+                <div class="experience-company">Mu Sigma Business Solutions – Mars USA</div>
+              </div>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Aug 2021 – Jan 2023</span>
+              <span class="experience-location">Bengaluru, India</span>
+            </div>
+            <p class="experience-summary">
+              Automated store audits and KPI dashboards across more than 100 SKUs via Azure and Databricks.
+            </p>
+            <ul class="experience-points">
+              <li>Integrated a YOLO v4 model in Azure Data Factory, reducing audit time by 50 percent.</li>
+              <li>Generated parallelized KPI scorecards using Pandas and Dask for large audit volumes.</li>
+              <li>Configured Azure Log Analytics for more than 500 daily audits to improve observability.</li>
+            </ul>
+          </div>
         </div>
       </div>
+
     </div>
-
-    <!-- MuSigma Senior -->
-    <div class="timeline-item" data-toggle="procure">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Aug 2023 – Jun 2024</div>
-        <h3 class="timeline-title">Senior Data Scientist (Procurement Analytics) <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">Mu Sigma Business Solutions – Walmart USA</div>
-        <p class="timeline-description">
-          Designed and deployed 15+ ETL pipelines on BigQuery to optimize procurement reporting and governance.
-        </p>
-        <div id="procure" class="timeline-details">
-          <h4 style="color:var(--brand);margin:0 0 10px">Achievements</h4>
-          <ul class="timeline-achievements">
-            <li>Converted SQL procedures to PySpark → refresh speed ↑ 30%.</li>
-            <li>Reduced manual reporting by 40% through Airflow-scheduled pipelines.</li>
-            <li>Led cross-functional stakeholder reviews and agile backlog planning.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- MuSigma Supply Chain -->
-    <div class="timeline-item" data-toggle="supply">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Jan 2023 – Aug 2023</div>
-        <h3 class="timeline-title">Data Scientist (Supply Chain Analytics) <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">Mu Sigma Business Solutions – Mars USA</div>
-        <p class="timeline-description">
-          Deployed optimization models and dashboards to improve national warehouse balance and inventory flows.
-        </p>
-        <div id="supply" class="timeline-details">
-          <ul class="timeline-achievements">
-            <li>Implemented GUROBI linear optimization reducing stock imbalance by 20%.</li>
-            <li>Enhanced solver stability with dimensionality reduction → accuracy ↑ 4%.</li>
-            <li>Delivered Power BI KPI visuals driving stakeholder adoption ↑ 15%.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- MuSigma Retail -->
-    <div class="timeline-item" data-toggle="retail">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Aug 2021 – Jan 2023</div>
-        <h3 class="timeline-title">Data Scientist (Retail Analytics) <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">Mu Sigma Business Solutions – Mars USA</div>
-        <p class="timeline-description">
-          Automated store audits and KPI dashboards across 100+ SKUs via Azure and Databricks.
-        </p>
-        <div id="retail" class="timeline-details">
-          <ul class="timeline-achievements">
-            <li>Integrated YOLO V4 model in ADF → audit time ↓ 50%.</li>
-            <li>Generated parallelized KPI scorecards using Pandas & Dask.</li>
-            <li>Configured Azure Log Analytics workspace for 500+ daily audits.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIT -->
-    <div class="timeline-item" data-toggle="vit">
-      <div class="timeline-content">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Jul 2017 – Jun 2021</div>
-        <h3 class="timeline-title">Bachelor of Technology – Computer Science & Engineering <span class="expand-indicator">▼</span></h3>
-        <div class="timeline-company">Vellore Institute of Technology, India</div>
-        <p class="timeline-description">
-          Graduated with distinction and active member of Youth Red Cross and university tech clubs.
-        </p>
-        <div id="vit" class="timeline-details">
-          <ul class="timeline-achievements">
-            <li>Engaged in peer mentoring and data visualization projects in Python.</li>
-            <li>Participated in hackathons and data-driven community events.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
   </section>
 
-  <!-- PROJECTS (sample) -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">
-        Automatically fetched from my GitHub portfolio
-      </p>
-    </div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          A selection of projects that showcase my work across real-time analytics, ML, and applied modeling.
+        </p>
+      </div>
 
-    <div class="projects-grid">
-  <!-- Project 1 -->
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-icon">⚙️</div>
-      <h3 class="project-title">
-        <a href="https://github.com/samarthsingh1/Capital_One_Food_Bank_Agentic_AI" target="_blank" rel="noopener noreferrer">
-          Multi-Agent AI System for Food Bank Operations Optimization
-        </a>
-      </h3>
-      <p class="project-description">
-        Real-time analytics pipeline using Kafka, ClickHouse, and FastAPI to process and visualize agricultural data.
-      </p>
-      <div class="project-tech">
-        <span class="tech-tag">Kafka</span>
-        <span class="tech-tag">ClickHouse</span>
-        <span class="tech-tag">FastAPI</span>
-        <span class="tech-tag">Docker</span>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" onclick="window.open('https://github.com/samarthsingh1/Capital_One_Food_Bank_Agentic_AI', '_blank')">
+          <div class="project-header">
+            <div class="project-header-top">
+              <div class="project-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <h3 class="project-title">
+                <a href="https://github.com/samarthsingh1/Capital_One_Food_Bank_Agentic_AI" target="_blank" rel="noopener noreferrer">
+                  Multi-Agent AI System for Food Bank Operations
+                </a>
+              </h3>
+            </div>
+            <p class="project-description">
+              Real-time analytics pipeline using Kafka, ClickHouse, and FastAPI to process and visualize agricultural and food bank ticket data, powering agentic AI decisions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Kafka</span>
+              <span class="tech-tag">ClickHouse</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" onclick="window.open('https://github.com/samarthsingh1/consumer_complaint_resolution_prediction', '_blank')">
+          <div class="project-header">
+            <div class="project-header-top">
+              <div class="project-icon">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <h3 class="project-title">
+                <a href="https://github.com/samarthsingh1/consumer_complaint_resolution_prediction" target="_blank" rel="noopener noreferrer">
+                  Consumer Complaint Resolution Prediction
+                </a>
+              </h3>
+            </div>
+            <p class="project-description">
+              End-to-end pipeline on CFPB complaints with preprocessing, class-imbalance handling, and model comparison between Logistic Regression and Random Forest using metrics such as accuracy, F1, and ROC-AUC.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" onclick="window.open('https://github.com/samarthsingh1/loan-application-classification', '_blank')">
+          <div class="project-header">
+            <div class="project-header-top">
+              <div class="project-icon">
+                <i class="fa-solid fa-file-pen"></i>
+              </div>
+              <h3 class="project-title">
+                <a href="https://github.com/samarthsingh1/loan-application-classification" target="_blank" rel="noopener noreferrer">
+                  Loan Application Classification
+                </a>
+              </h3>
+            </div>
+            <p class="project-description">
+              Built and compared LDA, Decision Tree, kNN, and SVM classifiers for loan approval prediction, applying PCA to reduce dimensionality and identifying SVM with PCA as the most efficient and accurate configuration.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">PCA</span>
+              <span class="tech-tag">ML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" onclick="window.open('https://github.com/samarthsingh1/f1-commentary', '_blank')">
+          <div class="project-header">
+            <div class="project-header-top">
+              <div class="project-icon">
+                <i class="fa-solid fa-flag-checkered"></i>
+              </div>
+              <h3 class="project-title">
+                <a href="https://github.com/samarthsingh1/f1-commentary" target="_blank" rel="noopener noreferrer">
+                  Real Time F1 Commentary (Bitcamp Hackathon)
+                </a>
+              </h3>
+            </div>
+            <p class="project-description">
+              Built an automated commentary engine for Formula 1 races using OpenF1 telemetry data and a Gemini-based wrapper to generate real-time, human-like race commentary from live signals.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">ML</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Project 2 -->
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-icon">📊</div>
-      <h3 class="project-title">
-        <a href="https://github.com/samarthsingh1/consumer_complaint_resolution_prediction" target="_blank" rel="noopener noreferrer">
-          Consumer Complaint Prediction
-        </a>
-      </h3>
-      <p class="project-description">
-        Implemented preprocessing and class imbalance handling, and evaluated Logistic Regression vs. Random Forest models using Accuracy, F1, and ROC-AUC for the dataset from the Consumer Finance Bureau of Protection dataset.
-      </p>
-      <div class="project-tech">
-        <span class="tech-tag">Scikit-learn</span>
-        <span class="tech-tag">Plotly</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">ClickHouse</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project 3 -->
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-icon">🤖</div>
-      <h3 class="project-title">
-        <a href="https://github.com/samarthsingh1/loan-application-classification" target="_blank" rel="noopener noreferrer">
-          Loan Application Classification
-        </a>
-      </h3>
-      <p class="project-description">
-        Built and compared LDA, Decision Tree, kNN, and SVM classifiers for loan approval prediction, applying PCA to enhance efficiency and identifying SVM with PCA as the optimal model.
-      </p>
-      <div class="project-tech">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Transformers</span>
-        <span class="tech-tag">FastAPI</span>
-        <span class="tech-tag">LLM</span>
-      </div>
-    </div>
-  </div>
-
-<!--  &lt;!&ndash; Project 4 &ndash;&gt;-->
-<!--  <div class="project-card">-->
-<!--    <div class="project-header">-->
-<!--      <div class="project-icon">🧠</div>-->
-<!--      <h3 class="project-title">-->
-<!--        <a href="https://github.com/samarthsingh1/PCA-MNIST-Classification" target="_blank" rel="noopener noreferrer">-->
-<!--          PCA + kNN on MNIST-->
-<!--        </a>-->
-<!--      </h3>-->
-<!--      <p class="project-description">-->
-<!--        Dimensionality reduction using PCA followed by classification using k-Nearest Neighbors on the MNIST dataset.-->
-<!--      </p>-->
-<!--      <div class="project-tech">-->
-<!--        <span class="tech-tag">Python</span>-->
-<!--        <span class="tech-tag">NumPy</span>-->
-<!--        <span class="tech-tag">Scikit-learn</span>-->
-<!--        <span class="tech-tag">Matplotlib</span>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  &lt;!&ndash; Project 5 &ndash;&gt;-->
-<!--  <div class="project-card">-->
-<!--    <div class="project-header">-->
-<!--      <div class="project-icon">📈</div>-->
-<!--      <h3 class="project-title">-->
-<!--        <a href="https://github.com/samarthsingh1/Time-Series-Forecasting-Dashboard" target="_blank" rel="noopener noreferrer">-->
-<!--          Time Series Forecasting Dashboard-->
-<!--        </a>-->
-<!--      </h3>-->
-<!--      <p class="project-description">-->
-<!--        Forecast visualization tool using ARIMA and Prophet models integrated with real-time KPI updates in Streamlit.-->
-<!--      </p>-->
-<!--      <div class="project-tech">-->
-<!--        <span class="tech-tag">Python</span>-->
-<!--        <span class="tech-tag">Streamlit</span>-->
-<!--        <span class="tech-tag">ARIMA</span>-->
-<!--        <span class="tech-tag">Prophet</span>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-</section>
-
-
-  <!-- TECHNICAL EXPERTISE (Merged) -->
+  <!-- TECHNICAL EXPERTISE -->
   <section id="expertise" class="section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Technical Expertise</h2>
         <p class="section-subtitle">
-          Comprehensive end-to-end data science, engineering, and AI proficiency across modern ecosystems
+          Comprehensive end-to-end data science, engineering, and AI proficiency across modern ecosystems.
         </p>
       </div>
 
       <div class="expertise-grid">
         <div class="expertise-card">
-          <h3 class="expertise-title">Machine Learning & AI</h3>
+          <h3 class="expertise-title">Machine Learning &amp; AI</h3>
           <p class="expertise-desc">
             Advanced algorithms and production deployment across supervised, unsupervised, and reinforcement learning.
           </p>
@@ -694,7 +1218,7 @@
         </div>
 
         <div class="expertise-card">
-          <h3 class="expertise-title">Programming & Analytics</h3>
+          <h3 class="expertise-title">Programming &amp; Analytics</h3>
           <p class="expertise-desc">
             Expert coding and applied statistics across modern languages and analytics stacks.
           </p>
@@ -705,7 +1229,7 @@
         </div>
 
         <div class="expertise-card">
-          <h3 class="expertise-title">Databases & Storage</h3>
+          <h3 class="expertise-title">Databases &amp; Storage</h3>
           <p class="expertise-desc">Relational, NoSQL, graph, and search engines for varied workloads.</p>
           <div class="tag-grid">
             <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span>
@@ -714,7 +1238,7 @@
         </div>
 
         <div class="expertise-card">
-          <h3 class="expertise-title">Visualization & BI</h3>
+          <h3 class="expertise-title">Visualization &amp; BI</h3>
           <p class="expertise-desc">Interactive analytics and data storytelling for decision-making.</p>
           <div class="tag-grid">
             <span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">D3.js</span>
@@ -725,7 +1249,7 @@
     </div>
   </section>
 
-  <!-- CONTACT CARDS + FORM -->
+  <!-- CONTACT CARDS -->
   <section id="contact" class="section contact-section">
     <div class="container">
       <div class="section-header">
@@ -735,128 +1259,108 @@
 
       <div class="contact-grid">
         <div class="contact-card">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
           <h3 class="contact-title">Email</h3>
           <a class="contact-link" href="mailto:samarth1@umd.edu">samarth1@umd.edu</a>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
           <h3 class="contact-title">LinkedIn</h3>
           <a class="contact-link" href="https://www.linkedin.com/in/samarth-singh-1776a1162/" target="_blank" rel="noopener noreferrer">Connect with me</a>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">🔗</div>
+          <div class="contact-icon">
+            <i class="fa-brands fa-github"></i>
+          </div>
           <h3 class="contact-title">GitHub</h3>
           <a class="contact-link" href="https://github.com/samarthsingh1" target="_blank" rel="noopener noreferrer">View my code</a>
         </div>
       </div>
 
-      <!-- Get In Touch Form -->
-      <!-- Make it functional: replace YOUR_FORMSPREE_ID with your Formspree endpoint id -->
-<!--      <form class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">-->
-<!--        <div class="row">-->
-<!--          <div>-->
-<!--            <label for="name">Name</label>-->
-<!--            <input id="name" name="name" type="text" placeholder="Your full name" required>-->
-<!--          </div>-->
-<!--          <div>-->
-<!--            <label for="email">Email</label>-->
-<!--            <input id="email" name="_replyto" type="email" placeholder="you@example.com" required>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div style="margin-top:10px">-->
-<!--          <label for="message">Message</label>-->
-<!--          <textarea id="message" name="message" placeholder="Whats your world changing idea" required></textarea>-->
-<!--        </div>-->
-<!--        <button type="submit">Send Message</button>-->
-<!--        <div class="form-note">This form uses Formspree. Swap in your endpoint to receive submissions.</div>-->
-<!--      </form>-->
-
-<!--    </div>-->
+      <!-- Contact form (still commented; ready if you want to enable later) -->
+      <!--
+      <form class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="_replyto" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div style="margin-top:10px">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What is your world changing idea?" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <div class="form-note">This form uses Formspree. Swap in your endpoint to receive submissions.</div>
+      </form>
+      -->
+    </div>
   </section>
 
   <script>
-    // Smooth scrolling (already handled by CSS scroll-behavior, but keep for older browsers)
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
+    // Smooth scrolling (CSS handles most, this helps older browsers)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
         const id = a.getAttribute('href');
         const target = document.querySelector(id);
-        if(target){
+        if (target) {
           e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // close mobile menu after click
+          const navLinks = document.getElementById('nav-links');
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+          }
         }
       });
     });
 
     // Navbar slight opacity on scroll
-    window.addEventListener('scroll', ()=>{
+    window.addEventListener('scroll', () => {
       const nav = document.querySelector('.navbar');
-      nav.style.background = window.scrollY > 100 ? 'rgba(10,10,10,0.95)' : 'rgba(0,0,0,0.90)';
+      nav.style.background = window.scrollY > 100
+        ? 'rgba(10,10,10,0.95)'
+        : 'rgba(0,0,0,0.90)';
     });
 
-    // Timeline expand/collapse
-    document.querySelectorAll('.timeline-item').forEach(item=>{
-      item.addEventListener('click', (event)=>{
-        const id = item.dataset.toggle;
-        const details = document.getElementById(id);
-        const isActive = details.classList.contains('active');
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-        // close all
-        document.querySelectorAll('.timeline-details').forEach(d=>d.classList.remove('active'));
-        document.querySelectorAll('.timeline-item').forEach(i=>i.classList.remove('active'));
-
-        // open clicked
-        if(!isActive){
-          details.classList.add('active');
-          item.classList.add('active');
-        }
-      });
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
     });
 
-    // Basic success UX for the form (works even with Formspree)
+    // Contact form guard (only if you uncomment the form)
     const form = document.querySelector('.contact-form');
-    form.addEventListener('submit', async (e)=>{
-      // let browser submit to Formspree; optional fetch below if you want ajax
-      // e.preventDefault();
-      // const data = new FormData(form);
-      // const res = await fetch(form.action, { method:'POST', body:data, headers: { 'Accept': 'application/json' }});
-      // if(res.ok){ alert('Thanks! I will get back to you shortly.'); form.reset(); } else { alert('Please try again or email me directly.'); }
-    });
-  </script>
-  <script>
-  async function loadGitHubProjects() {
-    const username = "samarthsingh1";
-    const container = document.getElementById("github-projects");
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        // default behavior is to let Formspree handle it
+        // if you want AJAX submission, uncomment below:
 
-    try {
-      const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
-      const repos = await response.json();
-
-      container.innerHTML = repos.map(repo => `
-        <div class="project-card" onclick="window.open('${repo.html_url}', '_blank')">
-          <div class="project-header">
-            <div class="project-icon">📁</div>
-            <h3 class="project-title">${repo.name}</h3>
-            <p class="project-description">
-              ${repo.description ? repo.description : "No description provided."}
-            </p>
-            <div class="project-tech">
-              ${repo.language ? `<span class="tech-tag">${repo.language}</span>` : ""}
-              <span class="tech-tag">★ ${repo.stargazers_count}</span>
-              <span class="tech-tag">⬇ ${repo.forks_count}</span>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    } catch (error) {
-      container.innerHTML = `<p style="color: var(--muted); text-align:center;">Unable to load GitHub repositories right now.</p>`;
-      console.error(error);
+        // e.preventDefault();
+        // const data = new FormData(form);
+        // const res = await fetch(form.action, {
+        //   method: 'POST',
+        //   body: data,
+        //   headers: { 'Accept': 'application/json' }
+        // });
+        // if (res.ok) {
+        //   alert('Thanks! I will get back to you shortly.');
+        //   form.reset();
+        // } else {
+        //   alert('Please try again or email me directly.');
+        // }
+      });
     }
-  }
-
-  loadGitHubProjects();
-</script>
-
-
+  </script>
 </body>
 </html>
