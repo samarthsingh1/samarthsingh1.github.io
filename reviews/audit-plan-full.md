@@ -10,6 +10,21 @@
 
 ---
 
+## Status update (2026-11-22, after fixes)
+
+All six critical issues are resolved. Each fix was re-verified in Chromium:
+
+| # | Critical issue | Status | Verification |
+|---|---|---|---|
+| 1 | Print / PDF blank | ✅ Fixed | `@media print` block; 0 of 6 sections hidden under print media; 6-page readable PDF |
+| 2 | Mobile menu focus | ✅ Fixed | Opening focuses the first link; Tab runs through all 6 links, the theme toggle and the menu button, and leaving the nav closes it; Escape returns focus to `#menu` |
+| 3 | Contact email | ✅ Fixed | Now `samarth.singh199@gmail.com` (owner's choice) |
+| 4 | Contrast | ✅ Fixed | axe-core: 0 violations in dark and light |
+| 5 | Infinite blink | ✅ Fixed | Blinks 4 times (4.4s) then stays solid; the footer cursor starts only when scrolled into view |
+| 6 | Focus reshapes controls | ✅ Fixed | Focused controls keep 999px and 50% radii |
+
+Also fixed along the way: the reveal failsafe (P-R1; verified by injecting a script error, after which all 6 sections appear at 3s), no-JS controls and nav (F-R5/U-R7/A-R6), the short-viewport histogram collapse (D-R1/F-R3, which now draws only the code field), U-R1 (Intuit details), U-R4 (stat framing), and an inaccurate project claim found while sourcing copy (the Loan Application card said SVM+PCA was most accurate; the repo README shows LDA at 91%). The remaining recommendations are still open.
+
 ## Master Verdict: APPROVE WITH CHANGES
 
 The redesign is a clear improvement over `main`. First-view transfer drops from more than 1.1MB to 139KB, a contact form that could never submit (`YOUR_FORMSPREE_ID`) is gone, and semantics, landmarks, reduced motion and reflow are solid. No page errors at any viewport. No lens found a reason to rework it. But six must-fix issues stand between this branch and a merge:
